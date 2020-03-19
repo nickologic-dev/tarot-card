@@ -117,16 +117,57 @@
                     <view key="view" contentMode="scaleToFill" id="TBi-EO-BqV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlaceHolder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x77-kO-aqV">
+                                <rect key="frame" x="86" y="57" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXv-L4-V4U">
+                                <rect key="frame" x="162" y="95" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbY-lY-sHQ">
+                                <rect key="frame" x="38" y="140" width="317" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekY-99-3wy">
+                                <rect key="frame" x="35" y="729" width="344" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="View Reading">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginReading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSE-N8-lEt"/>
+                                    <action selector="viewReadingBtn:" destination="FBF-k6-qj0" eventType="touchUpInside" id="r57-yq-Fd7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ORE-5M-DAn"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iw6-jz-ygx">
                         <barButtonItem key="backBarButtonItem" title=" " id="acc-p7-g5U"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="questionLabel" destination="kbY-lY-sHQ" id="WKc-vg-PHL"/>
+                        <outlet property="titleLabel" destination="x77-kO-aqV" id="tAO-Iw-BhA"/>
+                        <outlet property="viewReadingOutlet" destination="ekY-99-3wy" id="CDm-RD-i0f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmR-6Q-ZjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925" y="130"/>
+            <point key="canvasLocation" x="924.63768115942037" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>

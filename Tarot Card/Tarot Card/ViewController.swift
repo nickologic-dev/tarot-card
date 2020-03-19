@@ -6,16 +6,19 @@
 //  Copyright © 2020 nickelogic. All rights reserved.
 //
 
+struct Constants {
+    static let APP_NAME = "My Free Tarot"
+    static var question = ""
+}
+
 import UIKit
 
 class ViewController: UIViewController {
 
-    let APP_NAME = "My Free Tarot"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.titleLabel.text = APP_NAME
+        self.titleLabel.text = Constants.APP_NAME
         self.startButtonOutlet.layer.cornerRadius = 25.0
         self.enterQuestion.text = ""
         self.refreshOutlet.tintColor = UIColor.gray
@@ -49,7 +52,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func beginReading(_ sender: UIButton) {
-        let QUESTION = self.enterQuestion.text
+        if (self.enterQuestion.text != nil) {
+            self.enterQuestion.text = self.enterQuestion.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            if (self.enterQuestion.text?.last == "?") {
+                self.enterQuestion.text = String(self.enterQuestion.text?.dropLast() ?? "")
+            }
+        }
+        Constants.question = self.enterQuestion.text ?? ""
     }
     
     @IBOutlet weak var titleLabel: UILabel!
