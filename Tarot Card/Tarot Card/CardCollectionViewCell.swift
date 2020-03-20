@@ -10,7 +10,13 @@ import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var cardImage: UIImageView!
+    
+    @IBOutlet weak var card: UIButton!
+    
+    @IBAction func cardBtn(_ sender: UIButton) {
+        card.isEnabled = false
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

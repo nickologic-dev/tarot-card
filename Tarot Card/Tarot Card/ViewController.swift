@@ -6,7 +6,7 @@
 //  Copyright © 2020 nickelogic. All rights reserved.
 //
 
-struct Constants {
+struct Global {
     static let APP_NAME = "My Free Tarot"
     static var question = ""
 }
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.titleLabel.text = Constants.APP_NAME
+        self.titleLabel.text = Global.APP_NAME
         self.startButtonOutlet.layer.cornerRadius = 25.0
         self.refreshOutlet.tintColor = UIColor.gray
         self.refreshOutlet.isEnabled = false
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
                 self.enterQuestion.text = String(self.enterQuestion.text?.dropLast() ?? "")
             }
         }
-        Constants.question = self.enterQuestion.text ?? ""
+        Global.question = self.enterQuestion.text ?? ""
     }
     
     @IBOutlet weak var titleLabel: UILabel!

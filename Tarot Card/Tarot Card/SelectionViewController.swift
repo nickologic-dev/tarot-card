@@ -36,9 +36,9 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         
         self.view.backgroundColor = UIColor.white
         
-        self.titleLabel.text = Constants.APP_NAME
-        if (Constants.question != "") {
-            self.questionLabel.text = "\"\(Constants.question)?\""
+        self.titleLabel.text = Global.APP_NAME
+        if (Global.question != "") {
+            self.questionLabel.text = "\"\(Global.question)?\""
         }
         else {
             self.questionLabel.text = ""
