@@ -21,9 +21,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1M-aw-Zqa">
-                                <rect key="frame" x="2" y="2" width="83" height="115"/>
+                                <rect key="frame" x="3.5" y="0.0" width="83" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="doc.fill" catalog="system">
+                                <state key="normal" backgroundImage="card">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
                                 </state>
                                 <connections>
@@ -44,6 +44,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="doc.fill" catalog="system" width="56" height="64"/>
+        <image name="card" width="166" height="230"/>
     </resources>
 </document>

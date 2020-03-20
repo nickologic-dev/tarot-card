@@ -10,12 +10,11 @@ import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
 
-    
     @IBOutlet weak var card: UIButton!
     
     @IBAction func cardBtn(_ sender: UIButton) {
         card.isEnabled = false
-        
+        SelectionViewController().selectCards()
     }
     
     override func awakeFromNib() {

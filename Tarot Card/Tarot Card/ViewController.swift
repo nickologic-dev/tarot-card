@@ -9,6 +9,7 @@
 struct Global {
     static let APP_NAME = "My Free Tarot"
     static var question = ""
+    static var selectCounter = 1
 }
 
 import UIKit

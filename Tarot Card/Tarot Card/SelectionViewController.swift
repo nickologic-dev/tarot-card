@@ -18,7 +18,25 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         return 72;
     }
 
-
+    @IBOutlet weak var selfImage: UIImageView!
+    
+    @IBOutlet weak var situationImage: UIImageView!
+    
+    @IBOutlet weak var challengeImage: UIImageView!
+    
+    func selectCards() {
+        let name = "square"
+        if (Global.selectCounter == 1) {
+            self.selfImage.image = UIImage(named: name)
+        } else if (Global.selectCounter == 2) {
+            self.situationImage.image = UIImage(named: name)
+        } else if (Global.selectCounter == 3) {
+            self.challengeImage.image = UIImage(named: name)
+            viewReadingOutlet.isEnabled = true
+        }
+        Global.selectCounter += 1
+    }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
     }
@@ -66,6 +84,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     }
     
     @IBAction func viewReadingBtn(_ sender: UIButton) {
+        
     }
     
     @IBOutlet weak var viewReadingOutlet: UIButton!
