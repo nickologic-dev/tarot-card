@@ -4,13 +4,13 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="eso-RR-eqW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yRv-Nu-9tb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="UKm-ia-8c1" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kra-gQ-jgU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -20,6 +20,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bnb-v7-tEs"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRv-Nu-9tb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-678" y="130"/>
         </scene>
@@ -152,6 +153,32 @@
                                     <action selector="viewReadingBtn:" destination="FBF-k6-qj0" eventType="touchUpInside" id="r57-yq-Fd7"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rXC-7m-KKR" customClass="CardCollectionView" customModule="Tarot_Card" customModuleProvider="target">
+                                <rect key="frame" x="38" y="228" width="317" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a23-XK-FfD">
+                                    <size key="itemSize" width="109" height="210"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardcell" id="FGo-b0-PVS" customClass="CardCollectionViewCell" customModule="Tarot_Card" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lcq-Ll-u5W">
+                                            <rect key="frame" x="0.0" y="0.0" width="109" height="210"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="109" height="210"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="FBF-k6-qj0" id="Aki-JC-SYo"/>
+                                    <outlet property="delegate" destination="FBF-k6-qj0" id="jeB-IG-bRn"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ORE-5M-DAn"/>
@@ -160,6 +187,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="acc-p7-g5U"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="cardDeckView" destination="rXC-7m-KKR" id="Vv0-S0-T2T"/>
                         <outlet property="questionLabel" destination="kbY-lY-sHQ" id="WKc-vg-PHL"/>
                         <outlet property="titleLabel" destination="x77-kO-aqV" id="tAO-Iw-BhA"/>
                         <outlet property="viewReadingOutlet" destination="ekY-99-3wy" id="CDm-RD-i0f"/>

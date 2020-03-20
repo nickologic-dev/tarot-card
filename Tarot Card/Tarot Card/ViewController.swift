@@ -17,13 +17,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.titleLabel.text = Constants.APP_NAME
         self.startButtonOutlet.layer.cornerRadius = 25.0
-        self.enterQuestion.text = ""
         self.refreshOutlet.tintColor = UIColor.gray
         self.refreshOutlet.isEnabled = false
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func canRefresh(_ sender: UITextField) {

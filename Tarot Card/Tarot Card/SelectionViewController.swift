@@ -8,15 +8,33 @@
 
 import UIKit
 
-class SelectionViewController: UIViewController {
+class SelectionViewController: UIViewController, UICollectionViewDataSource {
+    
+    @IBOutlet var cardDeckView : CardCollectionView?
+    
+    // DataSource
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 72;
+    }
+
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardcell", for: indexPath)
+        return cell
+    }
+    
+    // --------
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.borderStyle()
+        
         self.view.backgroundColor = UIColor.white
-        self.viewReadingOutlet.layer.cornerRadius = 25.0
-        self.viewReadingOutlet.isEnabled = false
-        self.viewReadingOutlet.backgroundColor = UIColor.lightGray
         
         self.titleLabel.text = Constants.APP_NAME
         if (Constants.question != "") {
@@ -25,7 +43,18 @@ class SelectionViewController: UIViewController {
         else {
             self.questionLabel.text = ""
         }
-        // Do any additional setup after loading the view.
+        
+        self.viewReadingOutlet.layer.cornerRadius = 25.0
+        self.viewReadingOutlet.isEnabled = false
+        self.viewReadingOutlet.backgroundColor = UIColor.lightGray
+        
+        let cardCellNib = UINib(nibName: "CardCollectionViewCell", bundle: nil)
+        self.cardDeckView?.register(cardCellNib, forCellWithReuseIdentifier : "cardcell")
+    }
+    
+    override func awakeFromNib() {
+        let cardCellNib = UINib(nibName: "CardCollectionViewCell", bundle: nil)
+        self.cardDeckView?.register(cardCellNib, forCellWithReuseIdentifier : "cardcell")
     }
     
     func borderStyle() {
