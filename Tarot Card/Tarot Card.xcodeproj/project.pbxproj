@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7842C3F42425893D001FDD65 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842C3F32425893D001FDD65 /* CardDetailView.swift */; };
+		7842C3F72425899C001FDD65 /* CardDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842C3F52425899C001FDD65 /* CardDetailViewCell.swift */; };
+		7842C3F82425899C001FDD65 /* CardDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7842C3F62425899C001FDD65 /* CardDetailViewCell.xib */; };
 		78A58AB624227A0900A1DA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A58AB524227A0900A1DA6E /* AppDelegate.swift */; };
 		78A58AB824227A0900A1DA6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A58AB724227A0900A1DA6E /* SceneDelegate.swift */; };
 		78A58ABA24227A0900A1DA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A58AB924227A0900A1DA6E /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7842C3F32425893D001FDD65 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		7842C3F52425899C001FDD65 /* CardDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewCell.swift; sourceTree = "<group>"; };
+		7842C3F62425899C001FDD65 /* CardDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailViewCell.xib; sourceTree = "<group>"; };
 		78A58AB224227A0900A1DA6E /* Tarot Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tarot Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A58AB524227A0900A1DA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A58AB724227A0900A1DA6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +77,9 @@
 				78A58AD524243A3800A1DA6E /* CardCollectionView.swift */,
 				78A58AD724243A4C00A1DA6E /* CardCollectionViewCell.swift */,
 				78A58AD824243A4C00A1DA6E /* CardCollectionViewCell.xib */,
+				7842C3F32425893D001FDD65 /* CardDetailView.swift */,
+				7842C3F52425899C001FDD65 /* CardDetailViewCell.swift */,
+				7842C3F62425899C001FDD65 /* CardDetailViewCell.xib */,
 				78A58ABB24227A0900A1DA6E /* Main.storyboard */,
 				78A58ABE24227A0C00A1DA6E /* Assets.xcassets */,
 				78A58AC024227A0C00A1DA6E /* LaunchScreen.storyboard */,
@@ -139,6 +148,7 @@
 			files = (
 				78A58ADA24243A4C00A1DA6E /* CardCollectionViewCell.xib in Resources */,
 				78A58AC224227A0C00A1DA6E /* LaunchScreen.storyboard in Resources */,
+				7842C3F82425899C001FDD65 /* CardDetailViewCell.xib in Resources */,
 				78A58ABF24227A0C00A1DA6E /* Assets.xcassets in Resources */,
 				78A58ABD24227A0900A1DA6E /* Main.storyboard in Resources */,
 			);
@@ -152,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				78A58ABA24227A0900A1DA6E /* ViewController.swift in Sources */,
+				7842C3F42425893D001FDD65 /* CardDetailView.swift in Sources */,
 				78A58ACA2423EE9100A1DA6E /* SelectionViewController.swift in Sources */,
+				7842C3F72425899C001FDD65 /* CardDetailViewCell.swift in Sources */,
 				78A58AB624227A0900A1DA6E /* AppDelegate.swift in Sources */,
 				78A58AD624243A3800A1DA6E /* CardCollectionView.swift in Sources */,
 				78A58AD924243A4C00A1DA6E /* CardCollectionViewCell.swift in Sources */,

@@ -17,25 +17,6 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 72;
     }
-
-    @IBOutlet weak var selfImage: UIImageView!
-    
-    @IBOutlet weak var situationImage: UIImageView!
-    
-    @IBOutlet weak var challengeImage: UIImageView!
-    
-    func selectCards() {
-        let name = "square"
-        if (Global.selectCounter == 1) {
-            self.selfImage.image = UIImage(named: name)
-        } else if (Global.selectCounter == 2) {
-            self.situationImage.image = UIImage(named: name)
-        } else if (Global.selectCounter == 3) {
-            self.challengeImage.image = UIImage(named: name)
-            viewReadingOutlet.isEnabled = true
-        }
-        Global.selectCounter += 1
-    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
@@ -66,6 +47,10 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         self.viewReadingOutlet.isEnabled = false
         self.viewReadingOutlet.backgroundColor = UIColor.lightGray
         
+        self.selfImage.image = UIImage(systemName: "questionmark")
+        self.situationImage.image = UIImage(systemName: "questionmark")
+        self.challengeImage.image = UIImage(systemName: "questionmark")
+        
         let cardCellNib = UINib(nibName: "CardCollectionViewCell", bundle: nil)
         self.cardDeckView?.register(cardCellNib, forCellWithReuseIdentifier : "cardcell")
     }
@@ -81,6 +66,25 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
+    }
+    
+    @IBOutlet weak var selfImage: UIImageView!
+    
+    @IBOutlet weak var situationImage: UIImageView!
+    
+    @IBOutlet weak var challengeImage: UIImageView!
+    
+    func selectCards() {
+        let name = "square"
+        if (Global.selectCounter == 1) {
+            self.selfImage.image = UIImage(named: name)
+        } else if (Global.selectCounter == 2) {
+            situationImage.image = UIImage(named: name)
+        } else if (Global.selectCounter == 3) {
+            challengeImage.image = UIImage(named: name)
+            viewReadingOutlet.isEnabled = true
+        }
+        Global.selectCounter += 1
     }
     
     @IBAction func viewReadingBtn(_ sender: UIButton) {

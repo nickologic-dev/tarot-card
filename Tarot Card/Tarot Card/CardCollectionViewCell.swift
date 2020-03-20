@@ -14,7 +14,8 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     @IBAction func cardBtn(_ sender: UIButton) {
         card.isEnabled = false
-        SelectionViewController().selectCards()
+        Global.selectCounter += 1
+        
     }
     
     override func awakeFromNib() {
