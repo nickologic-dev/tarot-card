@@ -16,6 +16,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var startButtonOutlet: UIButton!
+    
+    @IBOutlet weak var refreshOutlet: UIButton!
+    
+    @IBOutlet weak var defaultDeckImage: UIImageView!
+    
+    @IBOutlet weak var enterQuestion: UITextField!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,14 +48,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var startButtonOutlet: UIButton!
-    
-    @IBOutlet weak var refreshOutlet: UIButton!
-    
-    @IBOutlet weak var defaultDeckImage: UIImageView!
-    
-    @IBOutlet weak var enterQuestion: UITextField!
-    
     @IBAction func refresh(_ sender: UIButton) {
         self.enterQuestion.text = ""
         self.refreshOutlet.tintColor = UIColor.gray
@@ -65,6 +68,5 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var titleLabel: UILabel!
 }
 

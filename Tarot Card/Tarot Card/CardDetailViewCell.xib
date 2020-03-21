@@ -10,24 +10,31 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CardDetailViewCell" customModule="Tarot_Card" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="175" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="350" height="497"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="175" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="497"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgd-F7-eAU">
-                        <rect key="frame" x="0.0" y="0.0" width="175" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="497"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKB-WH-1MH">
-                                <rect key="frame" x="0.0" y="0.0" width="175" height="200"/>
+                                <rect key="frame" x="0.0" y="47" width="350" height="450"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="square"/>
+                                <state key="normal" backgroundImage="square"/>
                                 <connections>
                                     <action selector="cardDetailBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="WKI-4i-YLF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbM-99-rv1">
+                                <rect key="frame" x="8" y="9" width="334" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
@@ -37,8 +44,9 @@
             <size key="customSize" width="97" height="84"/>
             <connections>
                 <outlet property="cardDetailOutlet" destination="wKB-WH-1MH" id="ydb-Jn-KZU"/>
+                <outlet property="cardLabel" destination="rbM-99-rv1" id="3bA-iY-EqJ"/>
             </connections>
-            <point key="canvasLocation" x="10.869565217391305" y="152.00892857142856"/>
+            <point key="canvasLocation" x="10.144927536231885" y="151.67410714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

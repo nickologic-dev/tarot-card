@@ -18,6 +18,12 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var challengeImage: UIImageView!
     
+    @IBOutlet weak var viewReadingOutlet: UIButton!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
     // DataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -87,11 +93,5 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     @IBAction func viewReadingBtn(_ sender: UIButton) {
     }
-    
-    @IBOutlet weak var viewReadingOutlet: UIButton!
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var questionLabel: UILabel!
     
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class CardDetailViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var cardLabel: UILabel!
+    
     @IBOutlet weak var cardDetailOutlet: UIButton!
     
     @IBAction func cardDetailBtn(_ sender: UIButton) {

@@ -272,24 +272,25 @@
                                     <action selector="detailButton:" destination="NkM-l5-wfh" eventType="touchUpInside" id="ACr-Pk-zFF"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tPw-j6-Z3z">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tPw-j6-Z3z" customClass="CardDetailView">
                                 <rect key="frame" x="20" y="197" width="374" height="503"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z6B-2w-9Z6">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z6B-2w-9Z6">
+                                    <size key="itemSize" width="342" height="497"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8Wa-ey-4d3">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="16" y="0.0" width="342" height="497"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HYl-TO-4cy">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="497"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="342" height="497"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -322,12 +323,13 @@
                     <connections>
                         <outlet property="cardQuestionLabel" destination="S4I-ni-ZPW" id="t1a-92-rwV"/>
                         <outlet property="cardTitleLabel" destination="oNQ-hg-SNf" id="kqC-lb-Hoo"/>
+                        <outlet property="cardView" destination="tPw-j6-Z3z" id="coy-JV-hAq"/>
                         <outlet property="detailBtnOutlet" destination="8vW-hs-wHj" id="Zab-tg-Zrg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6m-2J-L5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="130"/>
+            <point key="canvasLocation" x="1640.5797101449277" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>
