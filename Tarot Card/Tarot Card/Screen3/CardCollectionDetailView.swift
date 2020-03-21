@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "CardCell"
-
-class CardCollectionDetails: UICollectionViewController {
+class CardCollectionDetailView : UICollectionView {
 
 }

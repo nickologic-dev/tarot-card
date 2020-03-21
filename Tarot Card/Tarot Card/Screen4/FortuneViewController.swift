@@ -25,7 +25,11 @@ class FortuneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        titleLabel.text = Global.APP_NAME
+        questionLabel.text = Global.question
+        cardImage.image = UIImage(named: "square")
+        cardTypeLabel.text = "Self"
+        cardNameLabel.text = "Square"
     }
     
 }

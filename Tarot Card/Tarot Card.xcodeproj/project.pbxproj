@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7842C3F42425893D001FDD65 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842C3F32425893D001FDD65 /* CardDetailView.swift */; };
+		7842C3F42425893D001FDD65 /* CardCollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842C3F32425893D001FDD65 /* CardCollectionDetailView.swift */; };
 		7842C3F72425899C001FDD65 /* CardDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842C3F52425899C001FDD65 /* CardDetailViewCell.swift */; };
 		7842C3F82425899C001FDD65 /* CardDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7842C3F62425899C001FDD65 /* CardDetailViewCell.xib */; };
 		7842C3FA2425903D001FDD65 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842C3F92425903D001FDD65 /* CardDetailViewController.swift */; };
@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7842C3F32425893D001FDD65 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		7842C3F32425893D001FDD65 /* CardCollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionDetailView.swift; sourceTree = "<group>"; };
 		7842C3F52425899C001FDD65 /* CardDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewCell.swift; sourceTree = "<group>"; };
 		7842C3F62425899C001FDD65 /* CardDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailViewCell.xib; sourceTree = "<group>"; };
 		7842C3F92425903D001FDD65 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +55,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7842C3FD2426AAE5001FDD65 /* Screen3 */ = {
+			isa = PBXGroup;
+			children = (
+				7842C3F92425903D001FDD65 /* CardDetailViewController.swift */,
+				7842C3F32425893D001FDD65 /* CardCollectionDetailView.swift */,
+				7842C3F52425899C001FDD65 /* CardDetailViewCell.swift */,
+				7842C3F62425899C001FDD65 /* CardDetailViewCell.xib */,
+			);
+			path = Screen3;
+			sourceTree = "<group>";
+		};
+		7842C3FE2426AB06001FDD65 /* Screen2 */ = {
+			isa = PBXGroup;
+			children = (
+				78A58AC92423EE9100A1DA6E /* SelectionViewController.swift */,
+				78A58AD524243A3800A1DA6E /* CardCollectionView.swift */,
+				78A58AD724243A4C00A1DA6E /* CardCollectionViewCell.swift */,
+				78A58AD824243A4C00A1DA6E /* CardCollectionViewCell.xib */,
+			);
+			path = Screen2;
+			sourceTree = "<group>";
+		};
+		7842C3FF2426AB20001FDD65 /* Screen1 */ = {
+			isa = PBXGroup;
+			children = (
+				78A58AB924227A0900A1DA6E /* ViewController.swift */,
+			);
+			path = Screen1;
+			sourceTree = "<group>";
+		};
+		7842C4002426AB49001FDD65 /* Screen4 */ = {
+			isa = PBXGroup;
+			children = (
+				7842C3FB2426A14E001FDD65 /* FortuneViewController.swift */,
+			);
+			path = Screen4;
+			sourceTree = "<group>";
+		};
 		78A58AA924227A0900A1DA6E = {
 			isa = PBXGroup;
 			children = (
@@ -74,18 +112,12 @@
 		78A58AB424227A0900A1DA6E /* Tarot Card */ = {
 			isa = PBXGroup;
 			children = (
+				7842C3FF2426AB20001FDD65 /* Screen1 */,
+				7842C3FE2426AB06001FDD65 /* Screen2 */,
+				7842C3FD2426AAE5001FDD65 /* Screen3 */,
+				7842C4002426AB49001FDD65 /* Screen4 */,
 				78A58AB524227A0900A1DA6E /* AppDelegate.swift */,
 				78A58AB724227A0900A1DA6E /* SceneDelegate.swift */,
-				78A58AB924227A0900A1DA6E /* ViewController.swift */,
-				78A58AC92423EE9100A1DA6E /* SelectionViewController.swift */,
-				7842C3F92425903D001FDD65 /* CardDetailViewController.swift */,
-				7842C3FB2426A14E001FDD65 /* FortuneViewController.swift */,
-				78A58AD524243A3800A1DA6E /* CardCollectionView.swift */,
-				78A58AD724243A4C00A1DA6E /* CardCollectionViewCell.swift */,
-				78A58AD824243A4C00A1DA6E /* CardCollectionViewCell.xib */,
-				7842C3F32425893D001FDD65 /* CardDetailView.swift */,
-				7842C3F52425899C001FDD65 /* CardDetailViewCell.swift */,
-				7842C3F62425899C001FDD65 /* CardDetailViewCell.xib */,
 				78A58ABB24227A0900A1DA6E /* Main.storyboard */,
 				78A58ABE24227A0C00A1DA6E /* Assets.xcassets */,
 				78A58AC024227A0C00A1DA6E /* LaunchScreen.storyboard */,
@@ -168,7 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78A58ABA24227A0900A1DA6E /* ViewController.swift in Sources */,
-				7842C3F42425893D001FDD65 /* CardDetailView.swift in Sources */,
+				7842C3F42425893D001FDD65 /* CardCollectionDetailView.swift in Sources */,
 				7842C3FC2426A14E001FDD65 /* FortuneViewController.swift in Sources */,
 				78A58ACA2423EE9100A1DA6E /* SelectionViewController.swift in Sources */,
 				7842C3F72425899C001FDD65 /* CardDetailViewCell.swift in Sources */,
