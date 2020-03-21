@@ -52,11 +52,9 @@ extension CardDetailViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "detailCard", for: indexPath)
         let cardCell = cell as! CardDetailViewCell
-        //cardCell.selectViewController = self
-        
         cardCell.cardDetailOutlet.setBackgroundImage(UIImage(named: Global.cards[indexPath.section + indexPath.row + 1] ?? ""), for: .normal)
-
         cardCell.cardLabel.text = Global.labels[indexPath.section + indexPath.row + 1]
+        cardCell.cardNameLabel.text = Global.cards[indexPath.section + indexPath.row + 1]
         return cardCell
     }
     

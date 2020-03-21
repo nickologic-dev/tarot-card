@@ -14,7 +14,10 @@ class CardDetailViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardDetailOutlet: UIButton!
     
+    @IBOutlet weak var cardNameLabel: UILabel!
+    
     @IBAction func cardDetailBtn(_ sender: UIButton) {
+        
     }
     
     override func awakeFromNib() {

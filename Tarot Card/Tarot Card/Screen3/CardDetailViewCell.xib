@@ -35,8 +35,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3L-up-kKO">
+                                <rect key="frame" x="18" y="392" width="314" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.86667829750000003" green="0.86664563419999996" blue="0.86666786669999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                 </subviews>
             </view>
@@ -45,6 +52,7 @@
             <connections>
                 <outlet property="cardDetailOutlet" destination="wKB-WH-1MH" id="ydb-Jn-KZU"/>
                 <outlet property="cardLabel" destination="rbM-99-rv1" id="3bA-iY-EqJ"/>
+                <outlet property="cardNameLabel" destination="T3L-up-kKO" id="N3X-pj-Hok"/>
             </connections>
             <point key="canvasLocation" x="10.144927536231885" y="151.67410714285714"/>
         </collectionViewCell>
