@@ -58,7 +58,11 @@ class ViewController: UIViewController {
                 self.enterQuestion.text = String(self.enterQuestion.text?.dropLast() ?? "")
             }
         }
-        Global.question = self.enterQuestion.text ?? ""
+        if (self.enterQuestion.text != "") {
+            Global.question = "\"\(enterQuestion.text ?? "")?\""
+        } else {
+            Global.question = ""
+        }
     }
     
     @IBOutlet weak var titleLabel: UILabel!

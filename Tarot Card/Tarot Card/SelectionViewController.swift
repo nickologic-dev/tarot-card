@@ -12,6 +12,12 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet var cardDeckView : CardCollectionView?
     
+    @IBOutlet weak var selfImage: UIImageView!
+    
+    @IBOutlet weak var situationImage: UIImageView!
+    
+    @IBOutlet weak var challengeImage: UIImageView!
+    
     // DataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -24,6 +30,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardcell", for: indexPath)
+        cell.selectViewController = self
         return cell
     }
     
@@ -36,15 +43,10 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         self.view.backgroundColor = UIColor.white
         
         self.titleLabel.text = Global.APP_NAME
-        if (Global.question != "") {
-            self.questionLabel.text = "\"\(Global.question)?\""
-        }
-        else {
-            self.questionLabel.text = ""
-        }
+        self.questionLabel.text = Global.question
         
         self.viewReadingOutlet.layer.cornerRadius = 25.0
-        self.viewReadingOutlet.isEnabled = false
+        //self.viewReadingOutlet.isEnabled = false
         self.viewReadingOutlet.backgroundColor = UIColor.lightGray
         
         self.selfImage.image = UIImage(systemName: "questionmark")
@@ -68,11 +70,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         self.navigationController?.navigationBar.layoutIfNeeded()
     }
     
-    @IBOutlet weak var selfImage: UIImageView!
     
-    @IBOutlet weak var situationImage: UIImageView!
-    
-    @IBOutlet weak var challengeImage: UIImageView!
     
     func selectCards() {
         let name = "square"
@@ -88,7 +86,6 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     }
     
     @IBAction func viewReadingBtn(_ sender: UIButton) {
-        
     }
     
     @IBOutlet weak var viewReadingOutlet: UIButton!
@@ -96,14 +93,5 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var questionLabel: UILabel!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
