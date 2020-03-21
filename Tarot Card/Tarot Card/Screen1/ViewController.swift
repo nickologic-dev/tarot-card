@@ -10,6 +10,8 @@ struct Global {
     static let APP_NAME = "My Free Tarot"
     static var question = ""
     static var selectCounter = 1
+    static let labels:[Int:String] = [1:"Self", 2:"Situation", 3:"Challenge"]
+    static let cards:[Int:String] = [1:"square", 2:"circle", 3:"triangle"]
 }
 
 import UIKit
