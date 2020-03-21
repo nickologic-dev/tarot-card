@@ -33,7 +33,7 @@ class CardDetailViewController: UIViewController {
           return cardCell
       }
       
-      // --------
+    // --------
     
     override func viewDidLoad() {
         super.viewDidLoad()
