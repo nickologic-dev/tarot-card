@@ -19,7 +19,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var detailBtnOutlet: UIButton!
     
     // DataSource
-      
+    
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
           return 3;
       }
@@ -45,6 +45,9 @@ class CardDetailViewController: UIViewController {
         
         let cardNib = UINib(nibName: "CardDetailViewCell", bundle: nil)
         self.cardView?.register(cardNib, forCellWithReuseIdentifier : "card")
+        
+        cardView.dataSource = CardDetailViewController()
+        cardView.delegate = CardDetailViewController()
     }
     
     override func awakeFromNib() {

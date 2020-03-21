@@ -228,7 +228,7 @@
                                 <connections>
                                     <action selector="beginReading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSE-N8-lEt"/>
                                     <action selector="viewReadingBtn:" destination="FBF-k6-qj0" eventType="touchUpInside" id="r57-yq-Fd7"/>
-                                    <segue destination="NkM-l5-wfh" kind="show" id="GIm-Vt-sZj"/>
+                                    <segue destination="NkM-l5-wfh" kind="show" id="D0x-tQ-174"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -270,6 +270,7 @@
                                 </state>
                                 <connections>
                                     <action selector="detailButton:" destination="NkM-l5-wfh" eventType="touchUpInside" id="ACr-Pk-zFF"/>
+                                    <segue destination="kV6-Pp-bZv" kind="show" id="NR1-XI-c86"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tPw-j6-Z3z" customClass="CardDetailView">
@@ -319,7 +320,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kO6-yb-BkE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9hP-t5-pwX"/>
+                    <navigationItem key="navigationItem" id="9hP-t5-pwX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6rM-l9-Xg0"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardQuestionLabel" destination="S4I-ni-ZPW" id="t1a-92-rwV"/>
                         <outlet property="cardTitleLabel" destination="oNQ-hg-SNf" id="kqC-lb-Hoo"/>
@@ -331,10 +334,85 @@
             </objects>
             <point key="canvasLocation" x="1640.5797101449277" y="129.91071428571428"/>
         </scene>
+        <!--Fortune View Controller-->
+        <scene sceneID="jde-Oy-U1t">
+            <objects>
+                <viewController id="kV6-Pp-bZv" customClass="FortuneViewController" customModule="Tarot_Card" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mu6-JP-aiN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlaceHolder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4O-GT-5Xj">
+                                <rect key="frame" x="97" y="53" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMb-Ql-SAm">
+                                <rect key="frame" x="49" y="136" width="317" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuJ-N1-Ya9">
+                                <rect key="frame" x="173" y="91" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" translatesAutoresizingMaskIntoConstraints="NO" id="4EC-s3-8Zp">
+                                <rect key="frame" x="20" y="165" width="150" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Self" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wci-dH-RNW">
+                                <rect key="frame" x="186" y="255" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Square" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saU-GJ-Bvf">
+                                <rect key="frame" x="186" y="284" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tew-lA-nDt">
+                                <rect key="frame" x="20" y="413" width="374" height="449"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pID-EU-gAp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fCT-uo-YV7"/>
+                    <connections>
+                        <outlet property="cardImage" destination="4EC-s3-8Zp" id="Phm-8L-lMp"/>
+                        <outlet property="cardNameLabel" destination="saU-GJ-Bvf" id="vA5-J5-AkG"/>
+                        <outlet property="cardTypeLabel" destination="wci-dH-RNW" id="EkR-NQ-Nhp"/>
+                        <outlet property="fortuneText" destination="tew-lA-nDt" id="kNK-eK-uzy"/>
+                        <outlet property="questionLabel" destination="pMb-Ql-SAm" id="eK4-qs-rPW"/>
+                        <outlet property="titleLabel" destination="r4O-GT-5Xj" id="Bnl-wU-fJg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5K-8D-kuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360.8695652173915" y="129.91071428571428"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
         <image name="card" width="166" height="230"/>
         <image name="questionmark" catalog="system" width="48" height="64"/>
+        <image name="square" width="166" height="228"/>
     </resources>
 </document>
