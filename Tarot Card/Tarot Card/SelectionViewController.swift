@@ -30,7 +30,8 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardcell", for: indexPath)
-        cell.selectViewController = self
+        let cardCell = cell as! CardCollectionViewCell
+        cardCell.selectViewController = self
         return cell
     }
     
@@ -46,7 +47,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         self.questionLabel.text = Global.question
         
         self.viewReadingOutlet.layer.cornerRadius = 25.0
-        //self.viewReadingOutlet.isEnabled = false
+        self.viewReadingOutlet.isEnabled = false
         self.viewReadingOutlet.backgroundColor = UIColor.lightGray
         
         self.selfImage.image = UIImage(systemName: "questionmark")
@@ -70,17 +71,16 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         self.navigationController?.navigationBar.layoutIfNeeded()
     }
     
-    
-    
     func selectCards() {
-        let name = "square"
         if (Global.selectCounter == 1) {
-            self.selfImage.image = UIImage(named: name)
+            self.selfImage.image = UIImage(named: "square")
         } else if (Global.selectCounter == 2) {
-            situationImage.image = UIImage(named: name)
+            situationImage.image = UIImage(named: "circle")
         } else if (Global.selectCounter == 3) {
-            challengeImage.image = UIImage(named: name)
+            challengeImage.image = UIImage(named: "triangle")
             viewReadingOutlet.isEnabled = true
+            viewReadingOutlet.backgroundColor = UIColor.black
+            Global.selectCounter = 0
         }
         Global.selectCounter += 1
     }
