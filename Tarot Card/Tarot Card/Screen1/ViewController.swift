@@ -37,6 +37,13 @@ class ViewController: UIViewController {
         self.startButtonOutlet.layer.cornerRadius = 25.0
         self.refreshOutlet.tintColor = UIColor.gray
         self.refreshOutlet.isEnabled = false
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func canRefresh(_ sender: UITextField) {
