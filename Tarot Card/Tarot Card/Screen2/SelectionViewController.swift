@@ -62,6 +62,8 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         
         let cardCellNib = UINib(nibName: "CardCollectionViewCell", bundle: nil)
         self.cardDeckView?.register(cardCellNib, forCellWithReuseIdentifier : "cardcell")
+        
+        Global.selectCounter = 1
     }
     
     override func awakeFromNib() {
@@ -86,12 +88,16 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
             challengeImage.image = UIImage(named: "triangle")
             viewReadingOutlet.isEnabled = true
             viewReadingOutlet.backgroundColor = UIColor.black
-            Global.selectCounter = 0
+            Global.selectCounter = 1
         }
         Global.selectCounter += 1
     }
     
-    @IBAction func viewReadingBtn(_ sender: UIButton) {
+    @IBAction func cardShelfBtn(_ sender: Any) {
+        selectCards()
+    }
+    
+    @IBAction func viewReadingBtn(_ sender: Any) {
     }
     
 }

@@ -7,16 +7,17 @@
 //
 
 struct Global {
-    static let APP_NAME = "My Free Tarot"
+    static let APP_NAME = "Insight Tarot"
     static var question = ""
     static var selectCounter = 1
     static let labels:[Int:String] = [1:"Self", 2:"Situation", 3:"Challenge"]
     static let cards:[Int:String] = [1:"square", 2:"circle", 3:"triangle"]
+    static var chosenCard = -1
 }
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var startButtonOutlet: UIButton!
     
@@ -38,8 +39,19 @@ class ViewController: UIViewController {
         self.refreshOutlet.tintColor = UIColor.gray
         self.refreshOutlet.isEnabled = false
         
+        // dismiss keyboard on tap
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        // dismiss keyboard on return
+        enterQuestion.delegate = self
+        
+        Global.selectCounter = 1
+    }
+    
+    func textFieldShouldReturn(_ enterQuestion: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     @objc func dismissKeyboard() {

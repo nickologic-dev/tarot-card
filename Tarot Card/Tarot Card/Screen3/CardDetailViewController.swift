@@ -31,6 +31,8 @@ class CardDetailViewController: UIViewController {
         let cardNib = UINib(nibName: "CardDetailViewCell", bundle: nil)
         self.cardView?.register(cardNib, forCellWithReuseIdentifier : "detailCard")
         
+        Global.selectCounter = 1
+        
     }
     
     @IBAction func detailButton(_ sender: UIButton) {
@@ -55,6 +57,9 @@ extension CardDetailViewController : UICollectionViewDataSource {
         cardCell.cardDetailOutlet.setBackgroundImage(UIImage(named: Global.cards[indexPath.section + indexPath.row + 1] ?? ""), for: .normal)
         cardCell.cardLabel.text = Global.labels[indexPath.section + indexPath.row + 1]
         cardCell.cardNameLabel.text = Global.cards[indexPath.section + indexPath.row + 1]
+        if (cell.isSelected == true) {
+            Global.chosenCard = indexPath.section + indexPath.row + 1
+        }
         return cardCell
     }
     

@@ -27,9 +27,9 @@ class FortuneViewController: UIViewController {
 
         titleLabel.text = Global.APP_NAME
         questionLabel.text = Global.question
-        cardImage.image = UIImage(named: "square")
-        cardTypeLabel.text = "Self"
-        cardNameLabel.text = "Square"
+        cardImage.image = UIImage(named: Global.cards[Global.chosenCard] ?? "square")
+        cardTypeLabel.text = Global.labels[Global.chosenCard]
+        cardNameLabel.text = Global.cards[Global.chosenCard]
     }
     
 }

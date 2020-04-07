@@ -22,6 +22,12 @@ class CardCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        self.card.isEnabled = true
+
+        super.prepareForReuse()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
