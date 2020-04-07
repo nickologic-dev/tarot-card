@@ -16,19 +16,12 @@ class CardDetailViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardNameLabel: UILabel!
     
+    var cellNumber: Int = 0
+    
     @IBAction func cardDetailBtn(_ sender: UIButton) {
-//        Global.chosenCard = getIndexPath()
+        Global.chosenCard = cellNumber
     }
-//
-//    func getIndexPath() -> IndexPath? {
-//        guard let superView = self.superview as? UITableView else {
-//            print("superview is not a UITableView - getIndexPath")
-//            return nil
-//        }
-//        var indexPath = superView.indexPath(for: self)
-//        return indexPath
-//    }
-//
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
