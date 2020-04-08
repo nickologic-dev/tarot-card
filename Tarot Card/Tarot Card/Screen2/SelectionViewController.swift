@@ -100,6 +100,12 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     @IBAction func cardShelfBtn(_ sender: Any) {
         selectCards()
+//        for i in 0...72 {
+//            if (Global.cardDeck[i] == 0) {
+//                Global.cardDeck[i] = 1
+//                break
+//            }
+//        }
     }
     
     @IBAction func viewReadingBtn(_ sender: Any) {
