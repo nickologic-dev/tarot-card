@@ -38,6 +38,12 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardcell", for: indexPath)
         let cardCell = cell as! CardCollectionViewCell
         cardCell.selectViewController = self
+        
+        cardCell.cellNumber = indexPath.section + indexPath.row + 1
+        if (Global.cardDeck[cardCell.cellNumber-1] == 1) {
+            cardCell.card.isEnabled = false
+        }
+        
         return cell
     }
     
@@ -88,7 +94,6 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
             challengeImage.image = UIImage(named: "triangle")
             viewReadingOutlet.isEnabled = true
             viewReadingOutlet.backgroundColor = UIColor.black
-            Global.selectCounter = 1
         }
         Global.selectCounter += 1
     }

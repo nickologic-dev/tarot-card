@@ -30,9 +30,6 @@ class CardDetailViewController: UIViewController {
         
         let cardNib = UINib(nibName: "CardDetailViewCell", bundle: nil)
         self.cardView?.register(cardNib, forCellWithReuseIdentifier : "detailCard")
-        
-        Global.selectCounter = 1
-        
     }
     
     @IBAction func detailButton(_ sender: UIButton) {

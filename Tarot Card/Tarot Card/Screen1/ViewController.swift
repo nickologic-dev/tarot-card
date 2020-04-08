@@ -13,6 +13,7 @@ struct Global {
     static let labels:[Int:String] = [1:"Self", 2:"Situation", 3:"Challenge"]
     static let cards:[Int:String] = [1:"square", 2:"circle", 3:"triangle"]
     static var chosenCard = -1
+    static var cardDeck = [Int](repeating: 0, count: 72)
 }
 
 import UIKit
@@ -46,7 +47,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // dismiss keyboard on return
         enterQuestion.delegate = self
         
-        Global.selectCounter = 1
+//        enterQuestion.layer.cornerRadius = 8.0
+//        enterQuestion.layer.masksToBounds = true
+//        enterQuestion.layer.borderWidth = 1.0
+//        enterQuestion.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func textFieldShouldReturn(_ enterQuestion: UITextField) -> Bool {
@@ -76,6 +80,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func beginReading(_ sender: UIButton) {
+        Global.selectCounter = 1
+        Global.cardDeck = [Int](repeating: 0, count: 72)
         if (self.enterQuestion.text != nil) {
             self.enterQuestion.text = self.enterQuestion.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             if (self.enterQuestion.text?.last == "?") {

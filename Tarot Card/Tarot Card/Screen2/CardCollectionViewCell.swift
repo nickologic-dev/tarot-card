@@ -14,8 +14,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     var selectViewController : SelectionViewController?
     
+    var cellNumber: Int = 0
+    
     @IBAction func cardBtn(_ sender: UIButton) {
-        card.isEnabled = false
+        if (Global.selectCounter < 4) {
+            card.isEnabled = false
+            Global.cardDeck[cellNumber-1] = 1
+        }
         
         DispatchQueue.main.async { [weak self] in
             self!.selectViewController?.selectCards()
