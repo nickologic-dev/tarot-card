@@ -27,7 +27,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     // DataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 72;
+        return 78;
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -100,12 +100,12 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     @IBAction func cardShelfBtn(_ sender: Any) {
         selectCards()
-//        for i in 0...72 {
-//            if (Global.cardDeck[i] == 0) {
-//                Global.cardDeck[i] = 1
-//                break
-//            }
-//        }
+        for i in 0...78 {
+            if (Global.cardDeck[i] == 0) {
+                Global.cardDeck[i] = 1
+                break
+            }
+        }
     }
     
     @IBAction func viewReadingBtn(_ sender: Any) {

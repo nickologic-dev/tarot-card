@@ -29,7 +29,7 @@ class FortuneViewController: UIViewController {
         questionLabel.text = Global.question
         cardImage.image = UIImage(named: Global.cards[Global.chosenCard] ?? "square")
         cardTypeLabel.text = Global.labels[Global.chosenCard] ?? "Self"
-        cardNameLabel.text = Global.cards[Global.chosenCard]
+        cardNameLabel.text = Global.cards[Global.chosenCard] 
     }
     
 }
