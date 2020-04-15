@@ -6,23 +6,6 @@
 //  Copyright © 2020 nickelogic. All rights reserved.
 //
 
-struct Global {
-    static let APP_NAME = "Insight Tarot"
-    static var question = ""
-    static var selectCounter = 1
-    static let labels:[Int:String] = [1:"Self", 2:"Situation", 3:"Challenge"]
-    static let cards:[Int:String] = [1:"square", 2:"circle", 3:"triangle"]
-    static var chosenCard = -1
-    static var cardDeck = [Int](repeating: 0, count: 78)
-}
-
-struct Font {
-    static let REGULAR = "Montserrat-Regular"
-    static let MEDIUM = "Montserrat-Medium"
-    static let SEMI_BOLD = "Montserrat-SemiBold"
-    static let MEDIUM_ITALIC = "Montserrat-MediumItalic"
-}
-
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
@@ -40,8 +23,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        titleLabel.font = UIFont(name: Font.SEMI_BOLD, size: 35)
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.titleLabel.text = Global.APP_NAME

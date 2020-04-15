@@ -31,6 +31,7 @@
 		785C0384244680710052F503 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785C0371244680710052F503 /* Montserrat-ThinItalic.ttf */; };
 		785C0385244680710052F503 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785C0372244680710052F503 /* Montserrat-Italic.ttf */; };
 		785C0386244680710052F503 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785C0373244680710052F503 /* Montserrat-MediumItalic.ttf */; };
+		785C0388244685E80052F503 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C0387244685E80052F503 /* Constants.swift */; };
 		78A58AB624227A0900A1DA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A58AB524227A0900A1DA6E /* AppDelegate.swift */; };
 		78A58AB824227A0900A1DA6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A58AB724227A0900A1DA6E /* SceneDelegate.swift */; };
 		78A58ABA24227A0900A1DA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A58AB924227A0900A1DA6E /* ViewController.swift */; };
@@ -68,6 +69,7 @@
 		785C0371244680710052F503 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
 		785C0372244680710052F503 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		785C0373244680710052F503 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		785C0387244685E80052F503 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78A58AB224227A0900A1DA6E /* Tarot Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tarot Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A58AB524227A0900A1DA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A58AB724227A0900A1DA6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		78A58AB424227A0900A1DA6E /* Tarot Card */ = {
 			isa = PBXGroup;
 			children = (
+				785C0387244685E80052F503 /* Constants.swift */,
 				7842C3FF2426AB20001FDD65 /* Screen1 */,
 				7842C3FE2426AB06001FDD65 /* Screen2 */,
 				7842C3FD2426AAE5001FDD65 /* Screen3 */,
@@ -290,6 +293,7 @@
 				7842C3F72425899C001FDD65 /* CardDetailViewCell.swift in Sources */,
 				7842C3FA2425903D001FDD65 /* CardDetailViewController.swift in Sources */,
 				78A58AB624227A0900A1DA6E /* AppDelegate.swift in Sources */,
+				785C0388244685E80052F503 /* Constants.swift in Sources */,
 				78A58AD624243A3800A1DA6E /* CardCollectionView.swift in Sources */,
 				78A58AD924243A4C00A1DA6E /* CardCollectionViewCell.swift in Sources */,
 				78A58AB824227A0900A1DA6E /* SceneDelegate.swift in Sources */,
