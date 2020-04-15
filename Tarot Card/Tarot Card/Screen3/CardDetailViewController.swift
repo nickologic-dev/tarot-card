@@ -23,6 +23,8 @@ class CardDetailViewController: UIViewController {
 
         self.cardTitleLabel.text = Global.APP_NAME
         self.cardQuestionLabel.text = Global.question
+        self.cardQuestionLabel.font = UIFont(name: Font.MEDIUM_ITALIC, size: 18)
+        self.cardQuestionLabel.textColor =  UIColor(hex: Color.GREY)
         
         self.detailBtnOutlet.layer.cornerRadius = 25.0
         

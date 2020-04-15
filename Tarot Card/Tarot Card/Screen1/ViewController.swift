@@ -36,11 +36,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // dismiss keyboard on return
         enterQuestion.delegate = self
-        
-        enterQuestion.layer.cornerRadius = 8.0
-        enterQuestion.layer.masksToBounds = true
-        enterQuestion.layer.borderWidth = 1.0
-        enterQuestion.layer.borderColor = UIColor.lightGray.cgColor
+//        
+//        enterQuestion.layer.cornerRadius = 8.0
+//        enterQuestion.layer.masksToBounds = true
+//        enterQuestion.layer.borderWidth = 1.0
+//        enterQuestion.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func textFieldShouldReturn(_ enterQuestion: UITextField) -> Bool {

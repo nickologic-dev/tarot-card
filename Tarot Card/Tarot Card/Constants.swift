@@ -1,5 +1,5 @@
 //
-//  Constants.swifr.swift
+//  Constants.swift
 //  Tarot Card
 //
 //  Created by Nicole Beilis on 4/14/20.
@@ -19,6 +19,7 @@ struct Global {
 }
 
 struct Font {
+    // font changing : labelName.font = UIFont(name: Font.SEMI_BOLD, size: 35)
     static let REGULAR = "Montserrat-Regular"
     static let MEDIUM = "Montserrat-Medium"
     static let SEMI_BOLD = "Montserrat-SemiBold"
@@ -26,7 +27,9 @@ struct Font {
 }
 
 struct Color {
-    static let GREY_DEEP = 0x333333
-    static let GREY = 0x666666
-    static let GREY_PRIME = 0x949494
+    // color calling : let color = UIColor(argb: VAR)
+    static let GREY_DEEP = "#333333"
+    static let GREY = "#666666"
+    static let GREY_PRIME = "#949494"
+    static let GOLD_PRIME = "#A99000"
 }
