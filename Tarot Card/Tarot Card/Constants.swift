@@ -27,9 +27,9 @@ struct Font {
 }
 
 struct Color {
-    // color calling : let color = UIColor(argb: VAR)
-    static let GREY_DEEP = "#333333"
-    static let GREY = "#666666"
+    //UIColor(named: "AppRed")
+    static let GREY_DEEP = "greyDeep"
+    static let GREY = "#grey"
     static let GREY_PRIME = "#949494"
-    static let GOLD_PRIME = "#A99000"
+    static let GOLD_PRIME = "goldPrime"
 }

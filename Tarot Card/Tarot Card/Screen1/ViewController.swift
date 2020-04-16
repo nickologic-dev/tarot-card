@@ -20,7 +20,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,23 +35,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // dismiss keyboard on return
         enterQuestion.delegate = self
-//        
-//        enterQuestion.layer.cornerRadius = 8.0
-//        enterQuestion.layer.masksToBounds = true
-//        enterQuestion.layer.borderWidth = 1.0
-//        enterQuestion.layer.borderColor = UIColor.lightGray.cgColor
+        enterQuestion.layer.cornerRadius = 8.0
+        enterQuestion.layer.masksToBounds = true
+        enterQuestion.layer.borderWidth = 1.0
+        enterQuestion.layer.borderColor = UIColor.lightGray.cgColor
+        enterQuestion.font = UIFont(name: Font.REGULAR, size: 14)
+    }
+    
+    @IBAction func selectTextField(_ sender: Any) {
+        enterQuestion.layer.borderColor = UIColor(named: Color.GOLD_PRIME)?.cgColor
+        enterQuestion.placeholder = ""
     }
     
     func textFieldShouldReturn(_ enterQuestion: UITextField) -> Bool {
         self.view.endEditing(true)
+        if (enterQuestion.text == "") {
+            enterQuestion.layer.borderColor = UIColor.lightGray.cgColor
+            enterQuestion.placeholder = "Enter your question (optional)"
+        }
         return true
     }
     
     @objc func dismissKeyboard() {
+        if (enterQuestion.text == "") {
+            enterQuestion.layer.borderColor = UIColor.lightGray.cgColor
+            enterQuestion.placeholder = "Enter your question (optional)"
+        }
         view.endEditing(true)
     }
 
     @IBAction func canRefresh(_ sender: UITextField) {
+        enterQuestion.layer.borderColor = UIColor(named: Color.GOLD_PRIME)?.cgColor
         if (self.enterQuestion.text != "") {
             self.refreshOutlet.tintColor = UIColor.black
             self.refreshOutlet.isEnabled = true
@@ -65,6 +78,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func refresh(_ sender: UIButton) {
         self.enterQuestion.text = ""
+        enterQuestion.layer.borderColor = UIColor.lightGray.cgColor
+        enterQuestion.placeholder = "Enter your question (optional)"
         self.refreshOutlet.tintColor = UIColor.gray
         self.refreshOutlet.isEnabled = false
     }
