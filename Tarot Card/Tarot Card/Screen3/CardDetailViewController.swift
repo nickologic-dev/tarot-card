@@ -12,19 +12,10 @@ class CardDetailViewController: UIViewController {
 
     @IBOutlet weak var cardView: CardCollectionDetailView?
     
-    @IBOutlet weak var cardQuestionLabel: UILabel!
-    
-    @IBOutlet weak var cardTitleLabel: UILabel!
-    
     @IBOutlet weak var detailBtnOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.cardTitleLabel.text = Global.APP_NAME
-        self.cardQuestionLabel.text = Global.question
-        self.cardQuestionLabel.font = UIFont(name: Font.MEDIUM_ITALIC, size: 18)
-        self.cardQuestionLabel.textColor =  UIColor(hex: Color.GREY)
         
         self.detailBtnOutlet.layer.cornerRadius = 25.0
         

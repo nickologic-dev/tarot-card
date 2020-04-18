@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.navigationBar.tintColor = UIColor(named: Color.GREY)
         self.startButtonOutlet.layer.cornerRadius = 6.0
         startButtonOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 21)
         startButtonOutlet.setTitleColor(UIColor(named: Color.BLUE_LIGHT), for: UIControl.State.highlighted)

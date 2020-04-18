@@ -105,7 +105,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     func borderStyle() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.navigationBar.tintColor = UIColor(named: Color.GREY);
+        self.navigationController?.navigationBar.tintColor = UIColor(named: Color.GREY)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
