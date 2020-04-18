@@ -58,9 +58,12 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         self.questionLabel.font = UIFont(name: Font.ITALIC, size: 18)
         self.questionLabel.textColor =  UIColor(hex: Color.GREY)
         
-        self.viewReadingOutlet.layer.cornerRadius = 25.0
+        self.viewReadingOutlet.layer.cornerRadius = 6.0
         self.viewReadingOutlet.isEnabled = false
-        self.viewReadingOutlet.backgroundColor = UIColor.lightGray
+        viewReadingOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 21)
+        viewReadingOutlet.setTitleColor(UIColor(named: Color.GREY), for: UIControl.State.disabled)
+        viewReadingOutlet.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        viewReadingOutlet.setTitleColor(UIColor(named: Color.GOLD_LIGHT), for: UIControl.State.highlighted)
         
         self.selfImage.image = UIImage(systemName: "questionmark")
         self.situationImage.image = UIImage(systemName: "questionmark")
@@ -93,7 +96,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         } else if (Global.selectCounter == 3) {
             challengeImage.image = UIImage(named: "triangle")
             viewReadingOutlet.isEnabled = true
-            viewReadingOutlet.backgroundColor = UIColor.black
+            viewReadingOutlet.backgroundColor = UIColor(named: Color.GOLD_PRIME)
         }
         Global.selectCounter += 1
     }
@@ -110,6 +113,10 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
             }
             
         }
+    }
+    
+    @IBAction func onSelect(_ sender: Any) {
+        viewReadingOutlet.layer.backgroundColor = UIColor(named: Color.GOLD_DEEP)?.cgColor
     }
     
     @IBAction func viewReadingBtn(_ sender: Any) {

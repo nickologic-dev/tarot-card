@@ -202,18 +202,18 @@
                                     <outlet property="delegate" destination="FBF-k6-qj0" id="jeB-IG-bRn"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekY-99-3wy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekY-99-3wy">
                                 <rect key="frame" x="16" y="492" width="288" height="56"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" name="greyMedium"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="dtX-Yi-TaW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="View Reading">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="grey"/>
                                 </state>
                                 <connections>
                                     <action selector="beginReading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSE-N8-lEt"/>
+                                    <action selector="onSelect:" destination="FBF-k6-qj0" eventType="touchDown" id="Jxs-V3-zI5"/>
                                     <action selector="viewReadingBtn:" destination="FBF-k6-qj0" eventType="touchUpInside" id="2Vj-62-xlt"/>
                                     <segue destination="NkM-l5-wfh" kind="show" id="D0x-tQ-174"/>
                                 </connections>
@@ -575,6 +575,9 @@
         </namedColor>
         <namedColor name="greyDeep">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyMedium">
+            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

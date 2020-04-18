@@ -32,7 +32,11 @@ struct Color {
     static let GREY_DEEP = "greyDeep" //333333
     static let GREY = "#grey" //666666
     static let GREY_PRIME = "#greyPrime" //949494
+    static let GREY_LIGHT = "#greyLight"
     static let GOLD_PRIME = "goldPrime" //a0
+    static let GOLD_DEEP = "goldDeep" //a0
+    static let GOLD_LIGHT = "goldLight" //a0
+    static let GOLD_MEDIUM = "goldMedium" //a0
     static let BLUE_PRIME = "bluePrime" //0070A7
     static let BLUE_DEEP = "blueDeep" //005C8C
     static let BLUE_LIGHT = "blueLight" //96D8F6
