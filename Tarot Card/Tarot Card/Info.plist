@@ -8,6 +8,7 @@
 		<string>Montserrat-SemiBold.ttf</string>
 		<string>Montserrat-Regular.ttf</string>
 		<string>Montserrat-MediumItalic.ttf</string>
+		<string>Montserrat-Italic.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

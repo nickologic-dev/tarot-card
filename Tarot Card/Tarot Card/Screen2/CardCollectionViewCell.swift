@@ -12,6 +12,8 @@ class CardCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var card: UIButton!
     
+    @IBOutlet weak var border: UIView!
+    
     var selectViewController : SelectionViewController?
     
     var cellNumber: Int = 0
@@ -35,6 +37,9 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        border.layer.borderWidth = 1.0
+        border.layer.borderColor = UIColor(named: Color.GREY_MEDIUM)?.cgColor
+        border.layer.cornerRadius = 5.0
     }
 }

@@ -24,6 +24,7 @@ struct Font {
     static let MEDIUM = "Montserrat-Medium"
     static let SEMI_BOLD = "Montserrat-SemiBold"
     static let MEDIUM_ITALIC = "Montserrat-MediumItalic"
+    static let ITALIC = "Montserrat-Italic"
 }
 
 struct Color {
@@ -35,5 +36,5 @@ struct Color {
     static let BLUE_PRIME = "bluePrime" //0070A7
     static let BLUE_DEEP = "blueDeep" //005C8C
     static let BLUE_LIGHT = "blueLight" //96D8F6
-    
+    static let GREY_MEDIUM = "greyMedium" // #CCCCCC
 }

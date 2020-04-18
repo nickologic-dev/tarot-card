@@ -20,8 +20,6 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var viewReadingOutlet: UIButton!
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var questionLabel: UILabel!
     
     // DataSource
@@ -56,9 +54,8 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         
         self.view.backgroundColor = UIColor.white
         
-        self.titleLabel.text = Global.APP_NAME
         self.questionLabel.text = Global.question
-        self.questionLabel.font = UIFont(name: Font.MEDIUM_ITALIC, size: 18)
+        self.questionLabel.font = UIFont(name: Font.ITALIC, size: 18)
         self.questionLabel.textColor =  UIColor(hex: Color.GREY)
         
         self.viewReadingOutlet.layer.cornerRadius = 25.0
