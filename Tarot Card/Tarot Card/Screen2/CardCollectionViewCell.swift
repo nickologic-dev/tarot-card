@@ -21,6 +21,8 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBAction func cardBtn(_ sender: UIButton) {
         if (Global.selectCounter < 4) {
             card.isEnabled = false
+            card.setImage(UIImage(named: "selectedCard"), for: UIControl.State.disabled)
+            border.layer.borderWidth = 0.0
             Global.cardDeck[cellNumber-1] = 1
         }
         

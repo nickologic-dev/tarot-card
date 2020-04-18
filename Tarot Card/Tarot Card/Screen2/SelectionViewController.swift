@@ -105,13 +105,11 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         selectCards()
         var select = 0
         while select == 0 {
-            var num = Int.random(in: 6 ..< 79)
+            let num = Int.random(in: 0 ..< 79)
             if (Global.cardDeck[num] == 0) {
                 Global.cardDeck[num] = 1
                 select = 1
-                break
             }
-            
         }
     }
     
