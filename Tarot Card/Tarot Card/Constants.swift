@@ -27,9 +27,13 @@ struct Font {
 }
 
 struct Color {
-    //UIColor(named: "AppRed")
-    static let GREY_DEEP = "greyDeep"
-    static let GREY = "#grey"
-    static let GREY_PRIME = "#949494"
-    static let GOLD_PRIME = "goldPrime"
+    //UIColor(named: Color.NAME)
+    static let GREY_DEEP = "greyDeep" //333333
+    static let GREY = "#grey" //666666
+    static let GREY_PRIME = "#greyPrime" //949494
+    static let GOLD_PRIME = "goldPrime" //a0
+    static let BLUE_PRIME = "bluePrime" //0070A7
+    static let BLUE_DEEP = "blueDeep" //005C8C
+    static let BLUE_LIGHT = "blueLight" //96D8F6
+    
 }
