@@ -33,6 +33,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         self.card.isEnabled = true
+        border.layer.borderWidth = 1.0
 
         super.prepareForReuse()
     }

@@ -22,6 +22,17 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var questionLabel: UILabel!
     
+    @IBOutlet weak var selfBorder: UIView!
+    
+    @IBOutlet weak var challengeBorder: UIView!
+    
+    @IBOutlet weak var situationBorder: UIView!
+    
+    @IBOutlet weak var selfLabel: UILabel!
+    
+    @IBOutlet weak var situationLabel: UILabel!
+    
+    @IBOutlet weak var challengeLabel: UILabel!
     // DataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,6 +51,8 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         cardCell.cellNumber = indexPath.section + indexPath.row + 1
         if (Global.cardDeck[cardCell.cellNumber-1] == 1) {
             cardCell.card.isEnabled = false
+            cardCell.card.setImage(UIImage(named: "selectedCard"), for: UIControl.State.disabled)
+            cardCell.border.layer.borderWidth = 0.0
         }
     
         
@@ -65,9 +78,19 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         viewReadingOutlet.setTitleColor(UIColor.white, for: UIControl.State.normal)
         viewReadingOutlet.setTitleColor(UIColor(named: Color.GOLD_LIGHT), for: UIControl.State.highlighted)
         
-        self.selfImage.image = UIImage(systemName: "questionmark")
-        self.situationImage.image = UIImage(systemName: "questionmark")
-        self.challengeImage.image = UIImage(systemName: "questionmark")
+        self.selfImage.image = UIImage(named: "cardShelf")
+        self.situationImage.image = UIImage(named: "cardShelf")
+        self.challengeImage.image = UIImage(named: "cardShelf")
+        
+        selfBorder.layer.borderWidth = 2.0
+        selfBorder.layer.borderColor = UIColor(named: Color.GOLD_PRIME)?.cgColor
+        selfBorder.layer.cornerRadius = 6
+        
+        //Montserrat / Medium / 12 / #333333 / centred
+        selfLabel.font = UIFont(name: Font.MEDIUM, size: 12)
+        situationLabel.font = UIFont(name: Font.MEDIUM, size: 12)
+        challengeLabel.font = UIFont(name: Font.MEDIUM, size: 12)
+        
         
         let cardCellNib = UINib(nibName: "CardCollectionViewCell", bundle: nil)
         self.cardDeckView?.register(cardCellNib, forCellWithReuseIdentifier : "cardcell")
@@ -82,7 +105,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     func borderStyle() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.navigationBar.tintColor = UIColor.black;
+        self.navigationController?.navigationBar.tintColor = UIColor(named: Color.GREY);
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
@@ -91,10 +114,25 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     func selectCards() {
         if (Global.selectCounter == 1) {
             self.selfImage.image = UIImage(named: "square")
+            selfBorder.layer.borderWidth = 1.0
+            selfBorder.layer.borderColor = UIColor(named: Color.GREY_MEDIUM)?.cgColor
+            selfBorder.layer.cornerRadius = 6
+            situationBorder.layer.borderWidth = 2.0
+            situationBorder.layer.borderColor = UIColor(named: Color.GOLD_PRIME)?.cgColor
+            situationBorder.layer.cornerRadius = 6
         } else if (Global.selectCounter == 2) {
             situationImage.image = UIImage(named: "circle")
+            situationBorder.layer.borderWidth = 1.0
+            situationBorder.layer.borderColor = UIColor(named: Color.GREY_MEDIUM)?.cgColor
+            situationBorder.layer.cornerRadius = 6
+            challengeBorder.layer.borderWidth = 2.0
+            challengeBorder.layer.borderColor = UIColor(named: Color.GOLD_PRIME)?.cgColor
+            challengeBorder.layer.cornerRadius = 6
         } else if (Global.selectCounter == 3) {
             challengeImage.image = UIImage(named: "triangle")
+            challengeBorder.layer.borderWidth = 1.0
+            challengeBorder.layer.borderColor = UIColor(named: Color.GREY_MEDIUM)?.cgColor
+            challengeBorder.layer.cornerRadius = 6
             viewReadingOutlet.isEnabled = true
             viewReadingOutlet.backgroundColor = UIColor(named: Color.GOLD_PRIME)
         }
@@ -105,7 +143,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         selectCards()
         var select = 0
         while select == 0 {
-            let num = Int.random(in: 0 ..< 79)
+            let num = Int.random(in: 0 ..< 78)
             if (Global.cardDeck[num] == 0) {
                 Global.cardDeck[num] = 1
                 select = 1

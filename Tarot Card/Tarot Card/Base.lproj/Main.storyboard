@@ -233,7 +233,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="goldPrime"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="gzS-fA-rdt" firstAttribute="centerX" secondItem="Wni-vg-Z2Y" secondAttribute="centerX" id="7GK-RC-42o"/>
                                             <constraint firstItem="gzS-fA-rdt" firstAttribute="centerY" secondItem="Wni-vg-Z2Y" secondAttribute="centerY" id="Kn5-56-Jdh"/>
@@ -253,7 +253,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="goldPrime"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="jQg-fA-E0t" firstAttribute="centerX" secondItem="2lS-Vj-Aic" secondAttribute="centerX" id="BgP-u2-j5S"/>
                                             <constraint firstAttribute="width" constant="80" id="Wuj-Bz-kHn"/>
@@ -273,7 +273,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="goldPrime"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="BSm-Kx-Jqx" firstAttribute="centerY" secondItem="x5M-GA-Od6" secondAttribute="centerY" id="CQ6-bc-qAd"/>
                                             <constraint firstAttribute="height" constant="132" id="MoZ-is-Rmv"/>
@@ -293,36 +293,37 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4b-FB-WEU">
-                                        <rect key="frame" x="20" y="-44" width="240" height="30"/>
-                                        <connections>
-                                            <action selector="cardShelfBtn:" destination="FBF-k6-qj0" eventType="touchUpInside" id="9hH-QL-7gA"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOE-0g-7XL">
-                                        <rect key="frame" x="199" y="1" width="74" height="21"/>
+                                        <rect key="frame" x="199" y="3" width="74" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4b-FB-WEU">
+                                        <rect key="frame" x="12" y="30" width="261" height="129"/>
+                                        <connections>
+                                            <action selector="cardShelfBtn:" destination="FBF-k6-qj0" eventType="touchUpInside" id="9hH-QL-7gA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="TOE-0g-7XL" firstAttribute="leading" secondItem="oVZ-u4-80I" secondAttribute="trailing" constant="22" id="1lb-nU-5fQ"/>
-                                    <constraint firstItem="6Pc-mm-ney" firstAttribute="top" secondItem="h4b-FB-WEU" secondAttribute="bottom" constant="15" id="4qM-7x-PY7"/>
+                                    <constraint firstItem="h4b-FB-WEU" firstAttribute="top" secondItem="6Pc-mm-ney" secondAttribute="bottom" constant="8" symbolic="YES" id="02I-vm-Mjf"/>
                                     <constraint firstItem="x5M-GA-Od6" firstAttribute="leading" secondItem="Wni-vg-Z2Y" secondAttribute="trailing" constant="12" id="5Fr-uU-oXP"/>
-                                    <constraint firstItem="TOE-0g-7XL" firstAttribute="top" secondItem="h4b-FB-WEU" secondAttribute="bottom" constant="15" id="7MK-8E-7cy"/>
-                                    <constraint firstItem="x5M-GA-Od6" firstAttribute="top" secondItem="TOE-0g-7XL" secondAttribute="bottom" constant="5" id="9kC-hK-VJ3"/>
-                                    <constraint firstItem="oVZ-u4-80I" firstAttribute="top" secondItem="h4b-FB-WEU" secondAttribute="bottom" constant="15" id="HFj-Gr-Zy2"/>
                                     <constraint firstAttribute="bottom" secondItem="x5M-GA-Od6" secondAttribute="bottom" constant="26" id="KIE-WO-ZeL"/>
-                                    <constraint firstItem="oVZ-u4-80I" firstAttribute="leading" secondItem="6Pc-mm-ney" secondAttribute="trailing" constant="45" id="Sok-sU-6lz"/>
+                                    <constraint firstItem="h4b-FB-WEU" firstAttribute="leading" secondItem="2lS-Vj-Aic" secondAttribute="leading" id="Ouq-o3-GTJ"/>
+                                    <constraint firstItem="h4b-FB-WEU" firstAttribute="trailing" secondItem="TOE-0g-7XL" secondAttribute="trailing" id="Q6N-2a-A6N"/>
                                     <constraint firstItem="Wni-vg-Z2Y" firstAttribute="centerX" secondItem="TyK-hn-mpM" secondAttribute="centerX" id="XLc-Dh-nc8"/>
+                                    <constraint firstItem="TOE-0g-7XL" firstAttribute="centerX" secondItem="x5M-GA-Od6" secondAttribute="centerX" id="cF2-UP-Uad"/>
+                                    <constraint firstItem="6Pc-mm-ney" firstAttribute="centerX" secondItem="2lS-Vj-Aic" secondAttribute="centerX" id="g3G-PV-3wo"/>
                                     <constraint firstAttribute="bottom" secondItem="Wni-vg-Z2Y" secondAttribute="bottom" constant="26" id="nRv-9g-VoM"/>
                                     <constraint firstAttribute="bottom" secondItem="2lS-Vj-Aic" secondAttribute="bottom" constant="26" id="nnY-xj-59F"/>
                                     <constraint firstItem="Wni-vg-Z2Y" firstAttribute="top" secondItem="oVZ-u4-80I" secondAttribute="bottom" constant="5" id="qGL-YV-x8q"/>
-                                    <constraint firstItem="2lS-Vj-Aic" firstAttribute="top" secondItem="6Pc-mm-ney" secondAttribute="bottom" constant="5" id="qtS-UI-VgW"/>
+                                    <constraint firstItem="6Pc-mm-ney" firstAttribute="baseline" secondItem="oVZ-u4-80I" secondAttribute="baseline" id="riK-tz-z5f"/>
                                     <constraint firstItem="oVZ-u4-80I" firstAttribute="centerX" secondItem="TyK-hn-mpM" secondAttribute="centerX" id="sy5-fS-DwW"/>
+                                    <constraint firstItem="h4b-FB-WEU" firstAttribute="bottom" secondItem="2lS-Vj-Aic" secondAttribute="bottom" id="vGR-yW-LdR"/>
                                     <constraint firstItem="Wni-vg-Z2Y" firstAttribute="leading" secondItem="2lS-Vj-Aic" secondAttribute="trailing" constant="12" id="xGc-iv-59F"/>
+                                    <constraint firstItem="x5M-GA-Od6" firstAttribute="top" secondItem="TOE-0g-7XL" secondAttribute="bottom" constant="3" id="xoP-p8-2zG"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="xk6-9Q-BrU">
@@ -358,10 +359,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cardDeckView" destination="rXC-7m-KKR" id="Vv0-S0-T2T"/>
+                        <outlet property="challengeBorder" destination="x5M-GA-Od6" id="eem-Q5-dtN"/>
                         <outlet property="challengeImage" destination="BSm-Kx-Jqx" id="Pqs-pi-dBy"/>
+                        <outlet property="challengeLabel" destination="TOE-0g-7XL" id="zj9-Nm-Xuc"/>
                         <outlet property="questionLabel" destination="kbY-lY-sHQ" id="WKc-vg-PHL"/>
+                        <outlet property="selfBorder" destination="2lS-Vj-Aic" id="Ty4-Pb-eJ3"/>
                         <outlet property="selfImage" destination="jQg-fA-E0t" id="W4c-tp-265"/>
+                        <outlet property="selfLabel" destination="6Pc-mm-ney" id="qn0-EP-HJi"/>
+                        <outlet property="situationBorder" destination="Wni-vg-Z2Y" id="vbN-q4-n7y"/>
                         <outlet property="situationImage" destination="gzS-fA-rdt" id="pm7-jd-OGT"/>
+                        <outlet property="situationLabel" destination="oVZ-u4-80I" id="odM-Z5-hMC"/>
                         <outlet property="viewReadingOutlet" destination="ekY-99-3wy" id="CDm-RD-i0f"/>
                     </connections>
                 </viewController>
@@ -595,9 +602,6 @@
         <namedColor name="bluePrime">
             <color red="0.0" green="0.4392156862745098" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="goldPrime">
-            <color red="0.66274509803921566" green="0.56470588235294117" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="grey">
             <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -608,4 +612,5 @@
             <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" name="grey"/>
 </document>
