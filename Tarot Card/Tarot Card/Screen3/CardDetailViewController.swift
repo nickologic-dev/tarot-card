@@ -29,33 +29,44 @@ class CardDetailViewController: UIViewController {
         self.cardView?.register(cardNib, forCellWithReuseIdentifier : "detailCard")
         
         selfOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
-        selfOutlet.isEnabled = false
         selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.disabled)
         selfOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
         
         situationOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
-        situationOutlet.isEnabled = false
-        situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.disabled)
+        situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
         
         challengeOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
-        challengeOutlet.isEnabled = false
-        challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.disabled)
+        challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
     }
     
     @IBAction func selfBtn(_ sender: Any) {
-        //let indexPath = NSIndexPath(row: 1, section: 1)
-        
-        
-        
-       // imageCollectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+        DispatchQueue.main.async {
+            let indexPath = NSIndexPath(row: 0, section: 0)
+            self.cardView?.scrollToItem(at: indexPath as IndexPath, at: .centeredHorizontally, animated: true)
+        }
+        selfOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+        situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
     }
     
     @IBAction func situationBtn(_ sender: Any) {
-        
+        DispatchQueue.main.async {
+            let indexPath = NSIndexPath(row: 1, section: 0)
+            self.cardView?.scrollToItem(at: indexPath as IndexPath, at: .centeredHorizontally, animated: true)
+        }
+        situationOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+        selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
     }
     
     @IBAction func challengeBtn(_ sender: Any) {
-        
+        DispatchQueue.main.async {
+            let indexPath = NSIndexPath(row: 2, section: 0)
+            self.cardView?.scrollToItem(at: indexPath as IndexPath, at: .centeredHorizontally, animated: true)
+        }
+        challengeOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+        situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
     }
     
     @IBAction func detailButton(_ sender: UIButton) {

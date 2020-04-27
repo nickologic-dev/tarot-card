@@ -135,6 +135,8 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
             challengeBorder.layer.cornerRadius = 6
             viewReadingOutlet.isEnabled = true
             viewReadingOutlet.backgroundColor = UIColor(named: Color.GOLD_PRIME)
+        } else {
+            return
         }
         Global.selectCounter += 1
         

@@ -384,19 +384,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vW-hs-wHj">
-                                <rect key="frame" x="16" y="492" width="288" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Details">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="detailButton:" destination="NkM-l5-wfh" eventType="touchUpInside" id="ACr-Pk-zFF"/>
-                                    <segue destination="kV6-Pp-bZv" kind="show" id="NR1-XI-c86"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tPw-j6-Z3z" customClass="CardCollectionDetailView" customModule="Tarot_Card" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="100" width="320" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -460,15 +447,33 @@
                                     <constraint firstAttribute="height" constant="48" id="L0c-fz-lxB"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vW-hs-wHj">
+                                <rect key="frame" x="16" y="492" width="288" height="56"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="cbO-ya-fQW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Details">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="detailButton:" destination="NkM-l5-wfh" eventType="touchUpInside" id="ACr-Pk-zFF"/>
+                                    <segue destination="kV6-Pp-bZv" kind="show" id="NR1-XI-c86"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tPw-j6-Z3z" firstAttribute="leading" secondItem="kO6-yb-BkE" secondAttribute="leading" id="9SB-j3-9Ye"/>
+                            <constraint firstItem="8vW-hs-wHj" firstAttribute="leading" secondItem="kO6-yb-BkE" secondAttribute="leading" constant="16" id="D6y-Uk-nez"/>
                             <constraint firstItem="Pyk-4h-GF7" firstAttribute="leading" secondItem="kO6-yb-BkE" secondAttribute="leading" id="KYN-e2-fcd"/>
                             <constraint firstItem="tPw-j6-Z3z" firstAttribute="top" secondItem="Pyk-4h-GF7" secondAttribute="bottom" constant="8" id="LIt-jl-wmF"/>
                             <constraint firstItem="Pyk-4h-GF7" firstAttribute="trailing" secondItem="kO6-yb-BkE" secondAttribute="trailing" id="Q5h-7c-fjM"/>
                             <constraint firstItem="tPw-j6-Z3z" firstAttribute="trailing" secondItem="kO6-yb-BkE" secondAttribute="trailing" id="QtJ-Q0-VQ6"/>
                             <constraint firstItem="Pyk-4h-GF7" firstAttribute="top" secondItem="kO6-yb-BkE" secondAttribute="top" id="gOI-6z-g2e"/>
+                            <constraint firstItem="kO6-yb-BkE" firstAttribute="bottom" secondItem="8vW-hs-wHj" secondAttribute="bottom" constant="20" id="jgv-Yx-MTy"/>
+                            <constraint firstItem="kO6-yb-BkE" firstAttribute="trailing" secondItem="8vW-hs-wHj" secondAttribute="trailing" constant="16" id="rvc-9J-VNv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kO6-yb-BkE"/>
                     </view>
