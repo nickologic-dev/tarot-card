@@ -431,19 +431,28 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfZ-jF-xap">
-                                        <rect key="frame" x="129.5" y="9" width="61" height="30"/>
+                                        <rect key="frame" x="99" y="9" width="91" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Situation"/>
+                                        <connections>
+                                            <action selector="situationBtn:" destination="NkM-l5-wfh" eventType="touchUpInside" id="gbC-AO-19U"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3b-it-42H">
-                                        <rect key="frame" x="50" y="9" width="30" height="30"/>
+                                        <rect key="frame" x="8" y="9" width="72" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Self"/>
+                                        <connections>
+                                            <action selector="selfBtn:" destination="NkM-l5-wfh" eventType="touchUpInside" id="yB8-n6-FBa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yja-9S-y57">
-                                        <rect key="frame" x="242" y="10" width="69" height="30"/>
+                                        <rect key="frame" x="176" y="10" width="135" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Challenge"/>
+                                        <connections>
+                                            <action selector="challengeBtn:" destination="NkM-l5-wfh" eventType="touchUpInside" id="Ikf-j4-w2c"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -469,13 +478,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cardView" destination="tPw-j6-Z3z" id="Bwa-Iv-IVj"/>
+                        <outlet property="challengeOutlet" destination="yja-9S-y57" id="1MR-0Q-906"/>
                         <outlet property="detailBtnOutlet" destination="8vW-hs-wHj" id="Zab-tg-Zrg"/>
+                        <outlet property="selfOutlet" destination="n3b-it-42H" id="ULX-zJ-voB"/>
+                        <outlet property="situationOutlet" destination="NfZ-jF-xap" id="ggY-o1-EQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6m-2J-L5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <barButtonItem width="12" style="plain" systemItem="flexibleSpace" id="7bt-YC-4D3"/>
             </objects>
-            <point key="canvasLocation" x="1640.5797101449277" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1638.75" y="128.87323943661971"/>
         </scene>
         <!--Fortune View Controller-->
         <scene sceneID="jde-Oy-U1t">

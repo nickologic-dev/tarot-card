@@ -49,7 +49,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         cardCell.selectViewController = self
         
         cardCell.cellNumber = indexPath.section + indexPath.row + 1
-        if (Global.cardDeck[cardCell.cellNumber-1] == 1) {
+        if (Global.cardDeck[cardCell.cellNumber - 1] == 1) {
             cardCell.card.isEnabled = false
             cardCell.card.setImage(UIImage(named: "selectedCard"), for: UIControl.State.disabled)
             cardCell.border.layer.borderWidth = 0.0
@@ -137,6 +137,10 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
             viewReadingOutlet.backgroundColor = UIColor(named: Color.GOLD_PRIME)
         }
         Global.selectCounter += 1
+        
+        DispatchQueue.main.async {
+            self.cardDeckView?.reloadData()
+        }
     }
     
     @IBAction func cardShelfBtn(_ sender: Any) {

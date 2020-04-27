@@ -14,6 +14,10 @@ class CardDetailViewController: UIViewController {
     
     @IBOutlet weak var detailBtnOutlet: UIButton!
     
+    @IBOutlet weak var selfOutlet: UIButton!
+    @IBOutlet weak var situationOutlet: UIButton!
+    @IBOutlet weak var challengeOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +27,35 @@ class CardDetailViewController: UIViewController {
         
         let cardNib = UINib(nibName: "CardDetailViewCell", bundle: nil)
         self.cardView?.register(cardNib, forCellWithReuseIdentifier : "detailCard")
+        
+        selfOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
+        selfOutlet.isEnabled = false
+        selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.disabled)
+        selfOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+        
+        situationOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
+        situationOutlet.isEnabled = false
+        situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.disabled)
+        
+        challengeOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
+        challengeOutlet.isEnabled = false
+        challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.disabled)
+    }
+    
+    @IBAction func selfBtn(_ sender: Any) {
+        //let indexPath = NSIndexPath(row: 1, section: 1)
+        
+        
+        
+       // imageCollectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+    }
+    
+    @IBAction func situationBtn(_ sender: Any) {
+        
+    }
+    
+    @IBAction func challengeBtn(_ sender: Any) {
+        
     }
     
     @IBAction func detailButton(_ sender: UIButton) {
@@ -46,7 +79,6 @@ extension CardDetailViewController : UICollectionViewDataSource {
         Global.chosenCard = indexPath.section + indexPath.row + 1
         let cardCell = cell as! CardDetailViewCell
         cardCell.cardDetailOutlet.setBackgroundImage(UIImage(named: Global.cards[indexPath.section + indexPath.row + 1] ?? ""), for: .normal)
-        //cardCell.cardLabel.text = Global.labels[indexPath.section + indexPath.row + 1]
         cardCell.cardNameLabel.text = Global.cardNames[indexPath.section + indexPath.row + 1]
         cardCell.cellNumber = indexPath.section + indexPath.row + 1
         
