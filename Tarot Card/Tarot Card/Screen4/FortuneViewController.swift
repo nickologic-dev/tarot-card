@@ -10,26 +10,30 @@ import UIKit
 
 class FortuneViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var questionLabel: UILabel!
-    
-    @IBOutlet weak var cardImage: UIImageView!
-    
-    @IBOutlet weak var cardTypeLabel: UILabel!
-    
     @IBOutlet weak var cardNameLabel: UILabel!
     
     @IBOutlet weak var fortuneText: UITextView!
     
+    @IBOutlet weak var selfOutlet: UIButton!
+    @IBOutlet weak var situationOutlet: UIButton!
+    @IBOutlet weak var challengeOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        titleLabel.text = Global.APP_NAME
-        questionLabel.text = Global.question
-        cardImage.image = UIImage(named: Global.cards[Global.chosenCard] ?? "01-Ace-of-Coins")
-        cardTypeLabel.text = Global.labels[Global.chosenCard] ?? "Self"
-        cardNameLabel.text = Global.cardNames[Global.chosenCard] 
+        
+        cardNameLabel.text = Global.cardNames[Global.chosenCard]
+        cardNameLabel.font = UIFont(name: Font.SEMI_BOLD, size: 24)
+        cardNameLabel.textColor = UIColor(named: Color.GREY_DEEP)
+        
+        selfOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
+        selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.disabled)
+        selfOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+        
+        situationOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
+        situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        
+        challengeOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
+        challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
     }
     
 }
