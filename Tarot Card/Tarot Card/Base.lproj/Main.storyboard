@@ -16,7 +16,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kra-gQ-jgU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="grey"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bnb-v7-tEs"/>
@@ -170,7 +169,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YEU-d0-lvR">
-                                        <rect key="frame" x="59" y="0.0" width="54" height="94"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hg9-6H-gSv">
                                             <rect key="frame" x="0.0" y="0.0" width="54" height="94"/>
@@ -180,7 +179,7 @@
                                         <size key="customSize" width="54" height="94"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cis-JW-sL0">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="94"/>
+                                        <rect key="frame" x="59" y="0.0" width="54" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QcF-G7-vbr">
                                             <rect key="frame" x="0.0" y="0.0" width="54" height="94"/>
@@ -356,9 +355,7 @@
                         <viewLayoutGuide key="safeArea" id="ORE-5M-DAn"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iw6-jz-ygx">
-                        <barButtonItem key="backBarButtonItem" title=" " id="acc-p7-g5U">
-                            <color key="tintColor" name="grey"/>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="acc-p7-g5U"/>
                     </navigationItem>
                     <connections>
                         <outlet property="cardDeckView" destination="rXC-7m-KKR" id="Vv0-S0-T2T"/>
@@ -440,35 +437,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="9hP-t5-pwX">
                         <nil key="title"/>
-                        <barButtonItem key="backBarButtonItem" title=" " id="6rM-l9-Xg0">
-                            <color key="tintColor" name="grey"/>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " springLoaded="YES" id="7Mq-qt-rcJ"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fQ2-Dl-c6T">
+                            <rect key="frame" x="102" y="7" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="ONW-90-2Nf">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p1T-m7-aGA">
+                            <barButtonItem style="plain" id="CpC-cQ-ajR">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rsv-B2-fhd">
                                     <rect key="frame" x="233" y="7" width="71" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Challenge">
-                                        <color key="titleColor" name="grey"/>
-                                    </state>
+                                    <state key="normal" title="Button"/>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="teB-2s-3ch">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tr1-yk-Wha">
+                            <barButtonItem style="plain" id="QVz-Bk-j0G">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qOo-WR-7vD">
                                     <rect key="frame" x="154" y="7" width="71" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Situation">
-                                        <color key="titleColor" name="grey"/>
-                                    </state>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="yai-Mo-opM">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0G2-4y-uHt">
-                                    <rect key="frame" x="75" y="7" width="71" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Self">
-                                        <color key="titleColor" name="grey"/>
-                                    </state>
+                                    <state key="normal" title="Button"/>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -479,6 +466,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6m-2J-L5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <barButtonItem width="12" style="plain" systemItem="flexibleSpace" id="7bt-YC-4D3"/>
             </objects>
             <point key="canvasLocation" x="1640.5797101449277" y="129.91071428571428"/>
         </scene>
@@ -578,7 +566,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pID-EU-gAp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fCT-uo-YV7"/>
+                    <navigationItem key="navigationItem" id="fCT-uo-YV7">
+                        <barButtonItem key="backBarButtonItem" title="  " id="r33-SG-503"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardImage" destination="4EC-s3-8Zp" id="Phm-8L-lMp"/>
                         <outlet property="cardNameLabel" destination="saU-GJ-Bvf" id="vA5-J5-AkG"/>
@@ -602,7 +592,7 @@
             <color red="0.0" green="0.4392156862745098" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="grey">
-            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="greyDeep">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

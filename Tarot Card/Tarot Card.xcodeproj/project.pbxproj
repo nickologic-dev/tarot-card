@@ -42,6 +42,8 @@
 		78A58AD624243A3800A1DA6E /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A58AD524243A3800A1DA6E /* CardCollectionView.swift */; };
 		78A58AD924243A4C00A1DA6E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A58AD724243A4C00A1DA6E /* CardCollectionViewCell.swift */; };
 		78A58ADA24243A4C00A1DA6E /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A58AD824243A4C00A1DA6E /* CardCollectionViewCell.xib */; };
+		78BB2DE8245400120033D7B5 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2DE7245400120033D7B5 /* LaunchController.swift */; };
+		78BB2DEA245725CC0033D7B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB2DE9245725CC0033D7B5 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		78A58AD524243A3800A1DA6E /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
 		78A58AD724243A4C00A1DA6E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		78A58AD824243A4C00A1DA6E /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		78BB2DE7245400120033D7B5 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
+		78BB2DE9245725CC0033D7B5 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				785C0387244685E80052F503 /* Constants.swift */,
+				78BB2DE7245400120033D7B5 /* LaunchController.swift */,
 				7842C3FF2426AB20001FDD65 /* Screen1 */,
 				7842C3FE2426AB06001FDD65 /* Screen2 */,
 				7842C3FD2426AAE5001FDD65 /* Screen3 */,
@@ -190,6 +195,7 @@
 				78A58AC024227A0C00A1DA6E /* LaunchScreen.storyboard */,
 				78A58AC324227A0C00A1DA6E /* Info.plist */,
 				785C033A24467FD80052F503 /* Resources */,
+				78BB2DE9245725CC0033D7B5 /* LaunchScreen.xib */,
 			);
 			path = "Tarot Card";
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 				785C0376244680710052F503 /* Montserrat-Black.ttf in Resources */,
 				785C0383244680710052F503 /* Montserrat-LightItalic.ttf in Resources */,
 				78A58ADA24243A4C00A1DA6E /* CardCollectionViewCell.xib in Resources */,
+				78BB2DEA245725CC0033D7B5 /* LaunchScreen.xib in Resources */,
 				785C0386244680710052F503 /* Montserrat-MediumItalic.ttf in Resources */,
 				78A58AC224227A0C00A1DA6E /* LaunchScreen.storyboard in Resources */,
 				785C0380244680710052F503 /* Montserrat-BlackItalic.ttf in Resources */,
@@ -290,6 +297,7 @@
 				7842C3F42425893D001FDD65 /* CardCollectionDetailView.swift in Sources */,
 				7842C3FC2426A14E001FDD65 /* FortuneViewController.swift in Sources */,
 				78A58ACA2423EE9100A1DA6E /* SelectionViewController.swift in Sources */,
+				78BB2DE8245400120033D7B5 /* LaunchController.swift in Sources */,
 				7842C3F72425899C001FDD65 /* CardDetailViewCell.swift in Sources */,
 				7842C3FA2425903D001FDD65 /* CardDetailViewController.swift in Sources */,
 				78A58AB624227A0900A1DA6E /* AppDelegate.swift in Sources */,
