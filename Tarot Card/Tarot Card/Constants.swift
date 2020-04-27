@@ -13,7 +13,8 @@ struct Global {
     static var question = ""
     static var selectCounter = 1
     static let labels:[Int:String] = [1:"Self", 2:"Situation", 3:"Challenge"]
-    static let cards:[Int:String] = [1:"square", 2:"circle", 3:"triangle"]
+    static let cards:[Int:String] = [1:"01-Ace-of-Coins", 2:"01-Ace-of-Swords", 3:"01-The-Magician"]
+    static let cardNames:[Int:String] = [1:"Ace of Coins", 2:"Ace of Swords", 3:"The Magician"]
     static var chosenCard = -1
     static var cardDeck = [Int](repeating: 0, count: 78)
 }

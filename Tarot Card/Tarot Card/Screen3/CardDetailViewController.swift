@@ -46,8 +46,8 @@ extension CardDetailViewController : UICollectionViewDataSource {
         Global.chosenCard = indexPath.section + indexPath.row + 1
         let cardCell = cell as! CardDetailViewCell
         cardCell.cardDetailOutlet.setBackgroundImage(UIImage(named: Global.cards[indexPath.section + indexPath.row + 1] ?? ""), for: .normal)
-        cardCell.cardLabel.text = Global.labels[indexPath.section + indexPath.row + 1]
-        cardCell.cardNameLabel.text = Global.cards[indexPath.section + indexPath.row + 1]
+        //cardCell.cardLabel.text = Global.labels[indexPath.section + indexPath.row + 1]
+        cardCell.cardNameLabel.text = Global.cardNames[indexPath.section + indexPath.row + 1]
         cardCell.cellNumber = indexPath.section + indexPath.row + 1
         return cardCell
     }

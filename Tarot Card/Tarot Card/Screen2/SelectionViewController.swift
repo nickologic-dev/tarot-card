@@ -69,7 +69,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
         
         self.questionLabel.text = Global.question
         self.questionLabel.font = UIFont(name: Font.ITALIC, size: 18)
-        self.questionLabel.textColor =  UIColor(hex: Color.GREY)
+        self.questionLabel.textColor =  UIColor(named: Color.GREY)
         
         self.viewReadingOutlet.layer.cornerRadius = 6.0
         self.viewReadingOutlet.isEnabled = false
@@ -113,7 +113,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     
     func selectCards() {
         if (Global.selectCounter == 1) {
-            self.selfImage.image = UIImage(named: "square")
+            self.selfImage.image = UIImage(named: Global.cards[Global.selectCounter] ?? "01-Ace-of-Coins")
             selfBorder.layer.borderWidth = 1.0
             selfBorder.layer.borderColor = UIColor(named: Color.GREY_MEDIUM)?.cgColor
             selfBorder.layer.cornerRadius = 6
@@ -121,7 +121,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
             situationBorder.layer.borderColor = UIColor(named: Color.GOLD_PRIME)?.cgColor
             situationBorder.layer.cornerRadius = 6
         } else if (Global.selectCounter == 2) {
-            situationImage.image = UIImage(named: "circle")
+            situationImage.image = UIImage(named: Global.cards[Global.selectCounter] ?? "01-Ace-of-Coins")
             situationBorder.layer.borderWidth = 1.0
             situationBorder.layer.borderColor = UIColor(named: Color.GREY_MEDIUM)?.cgColor
             situationBorder.layer.cornerRadius = 6
@@ -129,7 +129,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
             challengeBorder.layer.borderColor = UIColor(named: Color.GOLD_PRIME)?.cgColor
             challengeBorder.layer.cornerRadius = 6
         } else if (Global.selectCounter == 3) {
-            challengeImage.image = UIImage(named: "triangle")
+            challengeImage.image = UIImage(named: Global.cards[Global.selectCounter] ?? "01-Ace-of-Coins")
             challengeBorder.layer.borderWidth = 1.0
             challengeBorder.layer.borderColor = UIColor(named: Color.GREY_MEDIUM)?.cgColor
             challengeBorder.layer.cornerRadius = 6
@@ -156,34 +156,7 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     }
     
     @IBAction func viewReadingBtn(_ sender: Any) {
+        
     }
     
-}
-
-extension UIColor {
-    public convenience init?(hex: String) {
-        let r, g, b, a: CGFloat
-
-        if hex.hasPrefix("#") {
-            let start = hex.index(hex.startIndex, offsetBy: 1)
-            let hexColor = String(hex[start...])
-
-            if hexColor.count == 8 {
-                let scanner = Scanner(string: hexColor)
-                var hexNumber: UInt64 = 0
-
-                if scanner.scanHexInt64(&hexNumber) {
-                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
-                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
-                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
-                    a = CGFloat(hexNumber & 0x000000ff) / 255
-
-                    self.init(red: r, green: g, blue: b, alpha: a)
-                    return
-                }
-            }
-        }
-
-        return nil
-    }
 }

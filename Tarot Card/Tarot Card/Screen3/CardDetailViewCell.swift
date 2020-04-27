@@ -9,8 +9,8 @@
 import UIKit
 
 class CardDetailViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var cardLabel: UILabel!
+    
+    @IBOutlet weak var borderView: UIView!
     
     @IBOutlet weak var cardDetailOutlet: UIButton!
     
@@ -24,7 +24,11 @@ class CardDetailViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        cardNameLabel.font = UIFont(name: Font.SEMI_BOLD, size: 25)
         // Initialization code
+        borderView.layer.borderWidth = 1.0
+        borderView.layer.borderColor = UIColor(named: Color.GREY_MEDIUM)?.cgColor
+        borderView.layer.cornerRadius = 10.0
     }
 
 }
