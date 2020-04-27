@@ -64,7 +64,7 @@
                 <outlet property="cardDetailOutlet" destination="wKB-WH-1MH" id="ydb-Jn-KZU"/>
                 <outlet property="cardNameLabel" destination="T3L-up-kKO" id="RGs-oE-COe"/>
             </connections>
-            <point key="canvasLocation" x="0.0" y="124"/>
+            <point key="canvasLocation" x="0.0" y="123.88392857142857"/>
         </collectionViewCell>
     </objects>
     <resources>

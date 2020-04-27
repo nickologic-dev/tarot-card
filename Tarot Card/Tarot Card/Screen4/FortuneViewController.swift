@@ -14,12 +14,20 @@ class FortuneViewController: UIViewController {
     
     @IBOutlet weak var fortuneText: UITextView!
     
+    @IBOutlet weak var fortuneView: FortuneCollectionView?
+    
+    var curIndex : Int = 0
+    
     @IBOutlet weak var selfOutlet: UIButton!
     @IBOutlet weak var situationOutlet: UIButton!
     @IBOutlet weak var challengeOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.fortuneView?.dataSource = self
+        let cardNib = UINib(nibName: "FortuneCollectionViewCell", bundle: nil)
+        self.fortuneView?.register(cardNib, forCellWithReuseIdentifier : "fortune")
         
         cardNameLabel.text = Global.cardNames[Global.chosenCard]
         cardNameLabel.font = UIFont(name: Font.SEMI_BOLD, size: 24)
@@ -37,3 +45,23 @@ class FortuneViewController: UIViewController {
     }
     
 }
+
+ extension FortuneViewController : UICollectionViewDataSource {
+     
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         return 3;
+     }
+
+     func numberOfSections(in collectionView: UICollectionView) -> Int {
+         return 1;
+     }
+
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fortune", for: indexPath)
+         Global.chosenCard = indexPath.section + indexPath.row + 1
+         let cardCell = cell as! FortuneCollectionViewCell
+         
+         return cardCell
+     }
+     
+ }

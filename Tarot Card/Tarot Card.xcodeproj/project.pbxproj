@@ -43,6 +43,9 @@
 		78A58ADA24243A4C00A1DA6E /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A58AD824243A4C00A1DA6E /* CardCollectionViewCell.xib */; };
 		78C0C5B924572AF900BFA0C1 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C0C5B824572AF900BFA0C1 /* LaunchScreen.swift */; };
 		78C0C5BF24572C3800BFA0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C0C5BE24572C3800BFA0C1 /* LaunchScreen.storyboard */; };
+		78C6E700245792D70078029E /* FortuneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6E6FE245792D70078029E /* FortuneCollectionViewCell.swift */; };
+		78C6E701245792D70078029E /* FortuneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C6E6FF245792D70078029E /* FortuneCollectionViewCell.xib */; };
+		78C6E703245792F50078029E /* FortuneCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6E702245792F50078029E /* FortuneCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		78A58AD824243A4C00A1DA6E /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		78C0C5B824572AF900BFA0C1 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		78C0C5BE24572C3800BFA0C1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78C6E6FE245792D70078029E /* FortuneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneCollectionViewCell.swift; sourceTree = "<group>"; };
+		78C6E6FF245792D70078029E /* FortuneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FortuneCollectionViewCell.xib; sourceTree = "<group>"; };
+		78C6E702245792F50078029E /* FortuneCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				7842C3FB2426A14E001FDD65 /* FortuneViewController.swift */,
+				78C6E702245792F50078029E /* FortuneCollectionView.swift */,
+				78C6E6FE245792D70078029E /* FortuneCollectionViewCell.swift */,
+				78C6E6FF245792D70078029E /* FortuneCollectionViewCell.xib */,
 			);
 			path = Screen4;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 				785C0379244680710052F503 /* Montserrat-ExtraLight.ttf in Resources */,
 				785C037E244680710052F503 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				785C037C244680710052F503 /* Montserrat-BoldItalic.ttf in Resources */,
+				78C6E701245792D70078029E /* FortuneCollectionViewCell.xib in Resources */,
 				785C0385244680710052F503 /* Montserrat-Italic.ttf in Resources */,
 				785C0384244680710052F503 /* Montserrat-ThinItalic.ttf in Resources */,
 				7842C3F82425899C001FDD65 /* CardDetailViewCell.xib in Resources */,
@@ -291,12 +301,14 @@
 			files = (
 				78A58ABA24227A0900A1DA6E /* ViewController.swift in Sources */,
 				7842C3F42425893D001FDD65 /* CardCollectionDetailView.swift in Sources */,
+				78C6E703245792F50078029E /* FortuneCollectionView.swift in Sources */,
 				7842C3FC2426A14E001FDD65 /* FortuneViewController.swift in Sources */,
 				78A58ACA2423EE9100A1DA6E /* SelectionViewController.swift in Sources */,
 				7842C3F72425899C001FDD65 /* CardDetailViewCell.swift in Sources */,
 				7842C3FA2425903D001FDD65 /* CardDetailViewController.swift in Sources */,
 				78A58AB624227A0900A1DA6E /* AppDelegate.swift in Sources */,
 				785C0388244685E80052F503 /* Constants.swift in Sources */,
+				78C6E700245792D70078029E /* FortuneCollectionViewCell.swift in Sources */,
 				78C0C5B924572AF900BFA0C1 /* LaunchScreen.swift in Sources */,
 				78A58AD624243A3800A1DA6E /* CardCollectionView.swift in Sources */,
 				78A58AD924243A4C00A1DA6E /* CardCollectionViewCell.swift in Sources */,
