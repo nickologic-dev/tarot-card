@@ -49,6 +49,7 @@ extension CardDetailViewController : UICollectionViewDataSource {
         //cardCell.cardLabel.text = Global.labels[indexPath.section + indexPath.row + 1]
         cardCell.cardNameLabel.text = Global.cardNames[indexPath.section + indexPath.row + 1]
         cardCell.cellNumber = indexPath.section + indexPath.row + 1
+        
         return cardCell
     }
     

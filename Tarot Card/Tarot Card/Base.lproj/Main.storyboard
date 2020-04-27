@@ -225,7 +225,7 @@
                                         <rect key="frame" x="104" y="27" width="80" height="132"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardShelf" translatesAutoresizingMaskIntoConstraints="NO" id="gzS-fA-rdt">
-                                                <rect key="frame" x="4" y="6" width="72" height="120.00000000000006"/>
+                                                <rect key="frame" x="4" y="6" width="72" height="120"/>
                                                 <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="72" id="8Q7-yq-Lwa"/>
@@ -245,7 +245,7 @@
                                         <rect key="frame" x="12" y="27" width="80" height="132"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardShelf" translatesAutoresizingMaskIntoConstraints="NO" id="jQg-fA-E0t">
-                                                <rect key="frame" x="4" y="6" width="72" height="120.00000000000006"/>
+                                                <rect key="frame" x="4" y="6" width="72" height="120"/>
                                                 <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="72" id="uxp-xE-YSi"/>
@@ -265,7 +265,7 @@
                                         <rect key="frame" x="196" y="27" width="80" height="132"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardShelf" translatesAutoresizingMaskIntoConstraints="NO" id="BSm-Kx-Jqx">
-                                                <rect key="frame" x="4" y="6" width="72" height="120.00000000000006"/>
+                                                <rect key="frame" x="4" y="6" width="72" height="120"/>
                                                 <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="72" id="2HE-QM-thl"/>
@@ -384,12 +384,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vW-hs-wHj">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vW-hs-wHj">
                                 <rect key="frame" x="16" y="492" width="288" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="FlK-QW-PHz"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Details">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -400,11 +398,11 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tPw-j6-Z3z" customClass="CardCollectionDetailView" customModule="Tarot_Card" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="144" width="320" height="456"/>
+                                <rect key="frame" x="0.0" y="100" width="320" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="456" id="tqm-5v-eC5"/>
+                                    <constraint firstAttribute="height" constant="456" id="Lei-34-wzV"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="28" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="z6B-2w-9Z6">
@@ -429,15 +427,39 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyk-4h-GF7">
+                                <rect key="frame" x="0.0" y="44" width="320" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfZ-jF-xap">
+                                        <rect key="frame" x="129.5" y="9" width="61" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Situation"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3b-it-42H">
+                                        <rect key="frame" x="50" y="9" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Self"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yja-9S-y57">
+                                        <rect key="frame" x="242" y="10" width="69" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Challenge"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="L0c-fz-lxB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kO6-yb-BkE" firstAttribute="trailing" secondItem="8vW-hs-wHj" secondAttribute="trailing" constant="16" id="4nE-rq-1PQ"/>
-                            <constraint firstItem="kO6-yb-BkE" firstAttribute="bottom" secondItem="8vW-hs-wHj" secondAttribute="bottom" constant="20" id="MPX-qZ-tha"/>
-                            <constraint firstItem="8vW-hs-wHj" firstAttribute="leading" secondItem="kO6-yb-BkE" secondAttribute="leading" constant="16" id="Q3p-sk-tQU"/>
-                            <constraint firstItem="tPw-j6-Z3z" firstAttribute="leading" secondItem="kO6-yb-BkE" secondAttribute="leading" id="qqi-Gl-4au"/>
-                            <constraint firstItem="tPw-j6-Z3z" firstAttribute="trailing" secondItem="kO6-yb-BkE" secondAttribute="trailing" id="rS3-au-NMx"/>
-                            <constraint firstItem="tPw-j6-Z3z" firstAttribute="top" secondItem="kO6-yb-BkE" secondAttribute="top" constant="100" id="zqW-zM-oUL"/>
+                            <constraint firstItem="tPw-j6-Z3z" firstAttribute="leading" secondItem="kO6-yb-BkE" secondAttribute="leading" id="9SB-j3-9Ye"/>
+                            <constraint firstItem="Pyk-4h-GF7" firstAttribute="leading" secondItem="kO6-yb-BkE" secondAttribute="leading" id="KYN-e2-fcd"/>
+                            <constraint firstItem="tPw-j6-Z3z" firstAttribute="top" secondItem="Pyk-4h-GF7" secondAttribute="bottom" constant="8" id="LIt-jl-wmF"/>
+                            <constraint firstItem="Pyk-4h-GF7" firstAttribute="trailing" secondItem="kO6-yb-BkE" secondAttribute="trailing" id="Q5h-7c-fjM"/>
+                            <constraint firstItem="tPw-j6-Z3z" firstAttribute="trailing" secondItem="kO6-yb-BkE" secondAttribute="trailing" id="QtJ-Q0-VQ6"/>
+                            <constraint firstItem="Pyk-4h-GF7" firstAttribute="top" secondItem="kO6-yb-BkE" secondAttribute="top" id="gOI-6z-g2e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kO6-yb-BkE"/>
                     </view>
