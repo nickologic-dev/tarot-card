@@ -502,8 +502,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-Fo-THG">
-                                <rect key="frame" x="0.0" y="44" width="320" height="48"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-Fo-THG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0S-n9-JdB">
                                         <rect key="frame" x="99" y="9" width="91" height="30"/>
@@ -534,12 +535,10 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="uYk-Ik-FWE"/>
-                                </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-3k-Bdh" customClass="FortuneCollectionView" customModule="Tarot_Card" customModuleProvider="target">
-                                <rect key="frame" x="28" y="100" width="264" height="418"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-3k-Bdh" customClass="FortuneCollectionView" customModule="Tarot_Card" customModuleProvider="target">
+                                <rect key="frame" x="28" y="56" width="264" height="442"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q1x-pZ-6Ng">
                                     <size key="itemSize" width="254" height="410"/>
@@ -549,7 +548,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="atB-e9-pGd">
-                                        <rect key="frame" x="0.0" y="4" width="254" height="410"/>
+                                        <rect key="frame" x="0.0" y="16" width="254" height="410"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Y6-I6-ZzN">
                                             <rect key="frame" x="0.0" y="0.0" width="254" height="410"/>
@@ -558,16 +557,25 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzf-9l-CcL">
+                                <rect key="frame" x="16" y="492" width="288" height="56"/>
+                                <color key="backgroundColor" name="blueMedium"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="dS0-8F-H10"/>
+                                </constraints>
+                                <state key="normal" title="View Face">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JjW-fO-Iv6" kind="unwind" unwindAction="flipCard:" id="7OE-uQ-kNT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="k4O-3k-Bdh" firstAttribute="leading" secondItem="pID-EU-gAp" secondAttribute="leading" constant="28" id="TXp-3S-l1K"/>
-                            <constraint firstItem="RKj-Fo-THG" firstAttribute="leading" secondItem="pID-EU-gAp" secondAttribute="leading" id="WqG-xv-EbF"/>
-                            <constraint firstItem="pID-EU-gAp" firstAttribute="bottom" secondItem="k4O-3k-Bdh" secondAttribute="bottom" constant="50" id="aG5-Q5-pFF"/>
-                            <constraint firstItem="RKj-Fo-THG" firstAttribute="top" secondItem="pID-EU-gAp" secondAttribute="top" id="jAb-2w-2rv"/>
-                            <constraint firstItem="pID-EU-gAp" firstAttribute="trailing" secondItem="k4O-3k-Bdh" secondAttribute="trailing" constant="28" id="pDa-Fd-UCe"/>
-                            <constraint firstItem="k4O-3k-Bdh" firstAttribute="top" secondItem="RKj-Fo-THG" secondAttribute="bottom" constant="8" symbolic="YES" id="t0n-Bu-1tQ"/>
-                            <constraint firstItem="pID-EU-gAp" firstAttribute="trailing" secondItem="RKj-Fo-THG" secondAttribute="trailing" id="zZg-0S-rW3"/>
+                            <constraint firstItem="vzf-9l-CcL" firstAttribute="leading" secondItem="pID-EU-gAp" secondAttribute="leading" constant="16" id="J6a-7n-tm2"/>
+                            <constraint firstItem="pID-EU-gAp" firstAttribute="bottom" secondItem="vzf-9l-CcL" secondAttribute="bottom" constant="20" id="LXf-rQ-KrI"/>
+                            <constraint firstItem="pID-EU-gAp" firstAttribute="trailing" secondItem="vzf-9l-CcL" secondAttribute="trailing" constant="16" id="UpU-ar-Amg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pID-EU-gAp"/>
                     </view>
@@ -579,9 +587,11 @@
                         <outlet property="fortuneView" destination="k4O-3k-Bdh" id="gBS-wJ-B5Q"/>
                         <outlet property="selfOutlet" destination="gUp-2E-D79" id="6By-sK-RKW"/>
                         <outlet property="situationOutlet" destination="S0S-n9-JdB" id="WGu-NR-Jte"/>
+                        <outlet property="viewFaceOutlet" destination="vzf-9l-CcL" id="Fx4-mb-vMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5K-8D-kuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="JjW-fO-Iv6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2360.625" y="128.87323943661971"/>
         </scene>
@@ -590,6 +600,9 @@
         <image name="Logo-112x60" width="224" height="120"/>
         <image name="cardBack" width="176" height="336"/>
         <image name="cardShelf" width="106" height="196"/>
+        <namedColor name="blueMedium">
+            <color red="0.0" green="0.58823529411764708" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="bluePrime">
             <color red="0.0" green="0.4392156862745098" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -16,6 +16,8 @@ class FortuneViewController: UIViewController {
     @IBOutlet weak var situationOutlet: UIButton!
     @IBOutlet weak var challengeOutlet: UIButton!
     
+    @IBOutlet weak var viewFaceOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +34,11 @@ class FortuneViewController: UIViewController {
         
         challengeOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
         challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        
+        viewFaceOutlet.layer.cornerRadius = 6.0
+        viewFaceOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 21)
+        viewFaceOutlet.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        
     }
     
     @IBAction func selfBtn(_ sender: Any) {

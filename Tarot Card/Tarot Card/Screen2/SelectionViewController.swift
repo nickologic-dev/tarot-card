@@ -54,8 +54,6 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
             cardCell.card.setImage(UIImage(named: "selectedCard"), for: UIControl.State.disabled)
             cardCell.border.layer.borderWidth = 0.0
         }
-    
-        
         return cell
     }
     

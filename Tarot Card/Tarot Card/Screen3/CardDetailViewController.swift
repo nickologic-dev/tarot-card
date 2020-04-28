@@ -97,3 +97,9 @@ extension CardDetailViewController : UICollectionViewDataSource {
     }
     
 }
+
+extension CardDetailViewController {
+  @IBAction func flipCard(_ segue: UIStoryboardSegue) {
+    
+  }
+}

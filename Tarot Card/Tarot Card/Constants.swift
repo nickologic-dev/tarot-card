@@ -43,4 +43,5 @@ struct Color {
     static let BLUE_LIGHT = "blueLight" //96D8F6
     static let GREY_MEDIUM = "greyMedium" // #CCCCCC
     static let BLUE_BRIGHT = "blueBright"
+    static let BLUE_MEDIUM = "blueMedium"
 }

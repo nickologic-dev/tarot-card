@@ -19,6 +19,7 @@ class FortuneCollectionViewCell: UICollectionViewCell {
         fortuneNameLabel.text = Global.cardNames[cellNumber]
         fortuneNameLabel.font = UIFont(name: Font.SEMI_BOLD, size: 24)
         fortuneNameLabel.textColor = UIColor(named: Color.GREY_DEEP)
+        
     }
 
 }
