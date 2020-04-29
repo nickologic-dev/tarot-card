@@ -490,7 +490,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6m-2J-L5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <barButtonItem width="12" style="plain" systemItem="flexibleSpace" id="7bt-YC-4D3"/>
             </objects>
             <point key="canvasLocation" x="1638.75" y="128.87323943661971"/>
         </scene>
@@ -502,9 +501,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-Fo-THG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-3k-Bdh" customClass="FortuneCollectionView" customModule="Tarot_Card" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="100" width="320" height="392"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="scrollIndicatorInsets" minX="28" minY="0.0" maxX="28" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q1x-pZ-6Ng">
+                                    <size key="itemSize" width="320" height="392"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="28" minY="0.0" maxX="28" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="atB-e9-pGd">
+                                        <rect key="frame" x="28" y="0.0" width="320" height="392"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Y6-I6-ZzN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="392"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzf-9l-CcL">
+                                <rect key="frame" x="16" y="492" width="288" height="56"/>
+                                <color key="backgroundColor" name="blueMedium"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="dS0-8F-H10"/>
+                                </constraints>
+                                <state key="normal" title="View Face">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JjW-fO-Iv6" kind="unwind" unwindAction="flipCard:" id="7OE-uQ-kNT"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-Fo-THG">
+                                <rect key="frame" x="0.0" y="44" width="320" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0S-n9-JdB">
                                         <rect key="frame" x="99" y="9" width="91" height="30"/>
@@ -535,47 +567,23 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-3k-Bdh" customClass="FortuneCollectionView" customModule="Tarot_Card" customModuleProvider="target">
-                                <rect key="frame" x="28" y="56" width="264" height="442"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q1x-pZ-6Ng">
-                                    <size key="itemSize" width="254" height="410"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="atB-e9-pGd">
-                                        <rect key="frame" x="0.0" y="16" width="254" height="410"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Y6-I6-ZzN">
-                                            <rect key="frame" x="0.0" y="0.0" width="254" height="410"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzf-9l-CcL">
-                                <rect key="frame" x="16" y="492" width="288" height="56"/>
-                                <color key="backgroundColor" name="blueMedium"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="dS0-8F-H10"/>
+                                    <constraint firstAttribute="height" constant="48" id="byx-3t-Gi1"/>
                                 </constraints>
-                                <state key="normal" title="View Face">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JjW-fO-Iv6" kind="unwind" unwindAction="flipCard:" id="7OE-uQ-kNT"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="k4O-3k-Bdh" firstAttribute="leading" secondItem="pID-EU-gAp" secondAttribute="leading" id="4Xa-gT-d08"/>
+                            <constraint firstItem="RKj-Fo-THG" firstAttribute="leading" secondItem="pID-EU-gAp" secondAttribute="leading" id="Iwk-He-zSw"/>
                             <constraint firstItem="vzf-9l-CcL" firstAttribute="leading" secondItem="pID-EU-gAp" secondAttribute="leading" constant="16" id="J6a-7n-tm2"/>
                             <constraint firstItem="pID-EU-gAp" firstAttribute="bottom" secondItem="vzf-9l-CcL" secondAttribute="bottom" constant="20" id="LXf-rQ-KrI"/>
                             <constraint firstItem="pID-EU-gAp" firstAttribute="trailing" secondItem="vzf-9l-CcL" secondAttribute="trailing" constant="16" id="UpU-ar-Amg"/>
+                            <constraint firstItem="pID-EU-gAp" firstAttribute="trailing" secondItem="k4O-3k-Bdh" secondAttribute="trailing" id="iZ1-cZ-TLj"/>
+                            <constraint firstItem="RKj-Fo-THG" firstAttribute="top" secondItem="pID-EU-gAp" secondAttribute="top" id="jb1-Og-v6O"/>
+                            <constraint firstItem="vzf-9l-CcL" firstAttribute="top" secondItem="k4O-3k-Bdh" secondAttribute="bottom" id="mup-SY-W2J"/>
+                            <constraint firstItem="k4O-3k-Bdh" firstAttribute="top" secondItem="RKj-Fo-THG" secondAttribute="bottom" constant="8" symbolic="YES" id="qzA-Jt-toC"/>
+                            <constraint firstItem="RKj-Fo-THG" firstAttribute="trailing" secondItem="pID-EU-gAp" secondAttribute="trailing" id="zEU-sz-hXH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pID-EU-gAp"/>
                     </view>

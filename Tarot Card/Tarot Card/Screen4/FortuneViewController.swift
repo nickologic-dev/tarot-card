@@ -73,7 +73,7 @@ class FortuneViewController: UIViewController {
     
 }
 
- extension FortuneViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+ extension FortuneViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
      
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          return 3;
@@ -83,16 +83,16 @@ class FortuneViewController: UIViewController {
          return 1;
      }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let screenSize: CGRect = UIScreen.main.bounds
-        //return CGSize(width: screenSize.width-56, height: screenSize.height-98-(navigationController?.navigationBar.frame.size.height ?? 0))
-        return CGSize(width: 50, height: 50)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: (fortuneView?.frame.width)!, height: (fortuneView?.frame.height)!)
+//    }
 
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fortune", for: indexPath)
          let cardCell = cell as! FortuneCollectionViewCell
         cardCell.cellNumber = indexPath.section + indexPath.row + 1
+        cardCell.fortuneNameLabel.text = Global.cardNames[cardCell.cellNumber]
+        cardCell.fortune.text = Global.cardFortunes[cardCell.cellNumber]
         
          return cardCell
      }
