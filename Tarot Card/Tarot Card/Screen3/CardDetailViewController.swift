@@ -41,7 +41,7 @@ class CardDetailViewController: UIViewController {
         challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
     }
     
-    @IBAction func selfBtn(_ sender: Any) {
+    @IBAction func selfBtn(_ sender: Any? = nil) {
         DispatchQueue.main.async {
             let indexPath = NSIndexPath(row: 0, section: 0)
             self.cardView?.scrollToItem(at: indexPath as IndexPath, at: .centeredHorizontally, animated: true)
@@ -73,6 +73,43 @@ class CardDetailViewController: UIViewController {
     
     @IBAction func detailButton(_ sender: UIButton) {
         
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        var indexPath = 0
+//        for cell in (cardView?.visibleCells)! {
+//            var indexPath = cardView?.indexPath(for: cell)
+//        }
+        if indexPath == 0 {
+            self.selfBtn()
+        }
+        else if indexPath == 1 {
+            situationOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+            selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        }
+        else if indexPath == 2 {
+            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+            situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+            selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let indexPath = Int((cardView?.contentOffset.x)! / (cardView?.frame.width)!)
+        print(indexPath)
+        //        for cell in (cardView?.visibleCells)! {
+        //            var indexPath = cardView?.indexPath(for: cell)
+        //        }
+                if indexPath == 0 {
+                    self.selfBtn()
+                }
+                else if indexPath == 1 {
+                    self.selfBtn()
+                }
+                else if indexPath == 2 {
+                    self.selfBtn()
+                }
     }
     
 }
