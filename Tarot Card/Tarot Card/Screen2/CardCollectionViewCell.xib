@@ -53,7 +53,7 @@
                 <outlet property="border" destination="NbN-gc-pP8" id="3jL-i3-CDP"/>
                 <outlet property="card" destination="g1M-aw-Zqa" id="bbV-Aq-FZi"/>
             </connections>
-            <point key="canvasLocation" x="77.536231884057983" y="102.79017857142857"/>
+            <point key="canvasLocation" x="76.811594202898561" y="102.45535714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

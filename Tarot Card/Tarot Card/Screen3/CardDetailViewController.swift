@@ -74,47 +74,9 @@ class CardDetailViewController: UIViewController {
     @IBAction func detailButton(_ sender: UIButton) {
         
     }
-    
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        var indexPath = 0
-//        for cell in (cardView?.visibleCells)! {
-//            var indexPath = cardView?.indexPath(for: cell)
-//        }
-        if indexPath == 0 {
-            self.selfBtn()
-        }
-        else if indexPath == 1 {
-            situationOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
-            selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
-            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
-        }
-        else if indexPath == 2 {
-            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
-            situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
-            selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
-        }
-    }
-    
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        let indexPath = Int((cardView?.contentOffset.x)! / (cardView?.frame.width)!)
-        print(indexPath)
-        //        for cell in (cardView?.visibleCells)! {
-        //            var indexPath = cardView?.indexPath(for: cell)
-        //        }
-                if indexPath == 0 {
-                    self.selfBtn()
-                }
-                else if indexPath == 1 {
-                    self.selfBtn()
-                }
-                else if indexPath == 2 {
-                    self.selfBtn()
-                }
-    }
-    
 }
 
-extension CardDetailViewController : UICollectionViewDataSource {
+extension CardDetailViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3;
@@ -134,6 +96,71 @@ extension CardDetailViewController : UICollectionViewDataSource {
         
         return cardCell
     }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+            var indexPath = 0
+            var index = cardView?.indexPathForItem(at: CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2))
+            indexPath = (index?.row ?? 0) + (index?.section ?? 0)
+            print(indexPath)
+    //        let indexPath = Int((cardView?.contentOffset.x)! / (cardView?.frame.width)!)
+    //        print(indexPath)
+            //        for cell in (cardView?.visibleCells)! {
+            //            var indexPath = cardView?.indexPath(for: cell)
+            //        }
+                    if indexPath == 0 {
+                        self.selfBtn()
+                    }
+                    else if indexPath == 1 {
+                        self.selfBtn()
+                    }
+                    else if indexPath == 2 {
+                        self.selfBtn()
+                    }
+        }
+        
+        func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+            var indexPath = 0
+            print(indexPath)
+            var index = cardView?.indexPathForItem(at: CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2))
+            indexPath = (index?.row ?? 0) + (index?.section ?? 0)
+            print(indexPath)
+            //        let indexPath = Int((cardView?.contentOffset.x)! / (cardView?.frame.width)!)
+    //        print(indexPath)
+            //        for cell in (cardView?.visibleCells)! {
+            //            var indexPath = cardView?.indexPath(for: cell)
+            //        }
+                    if indexPath == 0 {
+                        self.selfBtn()
+                    }
+                    else if indexPath == 1 {
+                        self.selfBtn()
+                    }
+                    else if indexPath == 2 {
+                        self.selfBtn()
+                    }
+        }
+    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+            var indexPath = 0
+            print(indexPath)
+            var index = cardView?.indexPathForItem(at: CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2))
+            indexPath = (index?.row ?? 0) + (index?.section ?? 0)
+            print(indexPath)
+            //        let indexPath = Int((cardView?.contentOffset.x)! / (cardView?.frame.width)!)
+    //        print(indexPath)
+            //        for cell in (cardView?.visibleCells)! {
+            //            var indexPath = cardView?.indexPath(for: cell)
+            //        }
+                    if indexPath == 0 {
+                        self.selfBtn()
+                    }
+                    else if indexPath == 1 {
+                        self.selfBtn()
+                    }
+                    else if indexPath == 2 {
+                        self.selfBtn()
+                    }
+        }
+        
     
 }
 
