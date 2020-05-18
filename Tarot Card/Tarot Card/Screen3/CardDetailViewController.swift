@@ -40,6 +40,10 @@ class CardDetailViewController: UIViewController {
         
         challengeOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 16)
         challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        
+        detailBtnOutlet.layer.cornerRadius = 6.0
+        detailBtnOutlet.titleLabel?.font = UIFont(name: Font.SEMI_BOLD, size: 21)
+        detailBtnOutlet.setTitleColor(UIColor.white, for: UIControl.State.normal)
     }
     
     @IBAction func selfBtn(_ sender: Any? = nil) {

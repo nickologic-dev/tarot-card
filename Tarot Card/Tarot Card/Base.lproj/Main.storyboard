@@ -448,7 +448,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vW-hs-wHj">
                                 <rect key="frame" x="16" y="492" width="288" height="56"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" name="blueMedium"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cbO-ya-fQW"/>
                                 </constraints>

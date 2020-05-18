@@ -46,8 +46,8 @@
             filePath = "Tarot Card/Screen3/CardDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "scrollTabbing()"
             landmarkType = "7">
          </BreakpointContent>
