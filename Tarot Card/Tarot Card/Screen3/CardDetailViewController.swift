@@ -26,6 +26,7 @@ class CardDetailViewController: UIViewController {
         self.detailBtnOutlet.layer.cornerRadius = 25.0
         
         self.cardView?.dataSource = self
+        self.cardView?.delegate = self
         
         let cardNib = UINib(nibName: "CardDetailViewCell", bundle: nil)
         self.cardView?.register(cardNib, forCellWithReuseIdentifier : "detailCard")
@@ -51,7 +52,7 @@ class CardDetailViewController: UIViewController {
         challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
     }
     
-    @IBAction func situationBtn(_ sender: Any) {
+    @IBAction func situationBtn(_ sender: Any? = nil) {
         DispatchQueue.main.async {
             let indexPath = NSIndexPath(row: 1, section: 0)
             self.cardView?.scrollToItem(at: indexPath as IndexPath, at: .centeredHorizontally, animated: true)
@@ -61,7 +62,7 @@ class CardDetailViewController: UIViewController {
         challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
     }
     
-    @IBAction func challengeBtn(_ sender: Any) {
+    @IBAction func challengeBtn(_ sender: Any? = nil) {
         DispatchQueue.main.async {
             let indexPath = NSIndexPath(row: 2, section: 0)
             self.cardView?.scrollToItem(at: indexPath as IndexPath, at: .centeredHorizontally, animated: true)
@@ -97,71 +98,46 @@ extension CardDetailViewController : UICollectionViewDataSource, UICollectionVie
         return cardCell
     }
     
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-            var indexPath = 0
-            var index = cardView?.indexPathForItem(at: CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2))
-            indexPath = (index?.row ?? 0) + (index?.section ?? 0)
-            print(indexPath)
-    //        let indexPath = Int((cardView?.contentOffset.x)! / (cardView?.frame.width)!)
-    //        print(indexPath)
-            //        for cell in (cardView?.visibleCells)! {
-            //            var indexPath = cardView?.indexPath(for: cell)
-            //        }
-                    if indexPath == 0 {
-                        self.selfBtn()
-                    }
-                    else if indexPath == 1 {
-                        self.selfBtn()
-                    }
-                    else if indexPath == 2 {
-                        self.selfBtn()
-                    }
-        }
-        
-        func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-            var indexPath = 0
-            print(indexPath)
-            var index = cardView?.indexPathForItem(at: CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2))
-            indexPath = (index?.row ?? 0) + (index?.section ?? 0)
-            print(indexPath)
-            //        let indexPath = Int((cardView?.contentOffset.x)! / (cardView?.frame.width)!)
-    //        print(indexPath)
-            //        for cell in (cardView?.visibleCells)! {
-            //            var indexPath = cardView?.indexPath(for: cell)
-            //        }
-                    if indexPath == 0 {
-                        self.selfBtn()
-                    }
-                    else if indexPath == 1 {
-                        self.selfBtn()
-                    }
-                    else if indexPath == 2 {
-                        self.selfBtn()
-                    }
-        }
-    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
-            var indexPath = 0
-            print(indexPath)
-            var index = cardView?.indexPathForItem(at: CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2))
-            indexPath = (index?.row ?? 0) + (index?.section ?? 0)
-            print(indexPath)
-            //        let indexPath = Int((cardView?.contentOffset.x)! / (cardView?.frame.width)!)
-    //        print(indexPath)
-            //        for cell in (cardView?.visibleCells)! {
-            //            var indexPath = cardView?.indexPath(for: cell)
-            //        }
-                    if indexPath == 0 {
-                        self.selfBtn()
-                    }
-                    else if indexPath == 1 {
-                        self.selfBtn()
-                    }
-                    else if indexPath == 2 {
-                        self.selfBtn()
-                    }
-        }
-        
+    func scrollToMostVisibleCell(){ //add if snapping while scrolling is not strong enough
+        let visibleRect = CGRect(origin: cardView?.contentOffset ?? CGPoint(), size: cardView?.bounds.size ?? CGSize())
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath = cardView?.indexPathForItem(at: visiblePoint)!
+        cardView?.scrollToItem(at: visibleIndexPath as! IndexPath, at: .centeredHorizontally, animated: true)
+    }
     
+    func scrollTabbing() {
+        print(cardView?.contentOffset.x)
+        print(cardView?.frame.width)
+        let indexPath = Int(((cardView?.contentOffset.x ?? 0) * 2) / (cardView?.frame.width ?? 1))
+        print(indexPath)
+        if indexPath == 0 {
+            selfOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+            situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        }
+        else if indexPath == 1 {
+            situationOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+            selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        }
+        else if indexPath == 2 {
+            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+            situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+            selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        scrollTabbing()
+    }
+        
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollTabbing()
+    }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+            scrollTabbing()
+    }
+        
 }
 
 extension CardDetailViewController {
