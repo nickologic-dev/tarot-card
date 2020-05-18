@@ -146,12 +146,17 @@ class SelectionViewController: UIViewController, UICollectionViewDataSource {
     @IBAction func cardShelfBtn(_ sender: Any) {
         selectCards()
         var select = 0
+        var num = 0
         while select == 0 {
-            let num = Int.random(in: 0 ..< 78)
+            num = Int.random(in: 0 ..< 78)
             if (Global.cardDeck[num] == 0) {
                 Global.cardDeck[num] = 1
                 select = 1
             }
+        }
+        DispatchQueue.main.async {
+            let indexPath = NSIndexPath(row: num, section: 0)
+            self.cardDeckView?.scrollToItem(at: indexPath as IndexPath, at: .centeredHorizontally, animated: true)
         }
     }
     
