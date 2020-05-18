@@ -24,6 +24,7 @@ class FortuneViewController: UIViewController {
         fortuneView?.decelerationRate = UIScrollView.DecelerationRate.fast
         
         self.fortuneView?.dataSource = self
+        self.fortuneView?.delegate = self
         let cardNib = UINib(nibName: "FortuneCollectionViewCell", bundle: nil)
         self.fortuneView?.register(cardNib, forCellWithReuseIdentifier : "fortune")
         
@@ -98,5 +99,39 @@ class FortuneViewController: UIViewController {
         
          return cardCell
      }
+    
+    func scrollTabbing() {
+        print(fortuneView?.contentOffset.x)
+        print(fortuneView?.frame.width)
+        let indexPath = Int(((fortuneView?.contentOffset.x ?? 0) * 1.5) / (fortuneView?.frame.width ?? 1))
+        print(indexPath)
+        if indexPath == 0 {
+            selfOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+            situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        }
+        else if indexPath == 1 {
+            situationOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+            selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        }
+        else if indexPath == 2 {
+            challengeOutlet.setTitleColor(UIColor(named: Color.GREY_DEEP), for: UIControl.State.normal)
+            situationOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+            selfOutlet.setTitleColor(UIColor(named: Color.GREY_PRIME), for: UIControl.State.normal)
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        scrollTabbing()
+    }
+        
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollTabbing()
+    }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+            scrollTabbing()
+    }
+        
      
  }
