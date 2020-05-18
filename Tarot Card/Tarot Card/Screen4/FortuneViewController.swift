@@ -21,6 +21,8 @@ class FortuneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fortuneView?.decelerationRate = UIScrollView.DecelerationRate.fast
+        
         self.fortuneView?.dataSource = self
         let cardNib = UINib(nibName: "FortuneCollectionViewCell", bundle: nil)
         self.fortuneView?.register(cardNib, forCellWithReuseIdentifier : "fortune")
